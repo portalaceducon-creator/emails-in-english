@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business English: Mastering Professional Emails — Fabio Busse</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D1B3E;--blue:#1A3A7C;--sky:#2563EB;
+  --teal:#0D9488;--teal-l:#ECFDF5;
+  --gold:#D97706;--gold-l:#FEF3C7;
+  --coral:#DC2626;--coral-l:#FEF2F2;
+  --purple:#7C3AED;--purple-l:#F5F3FF;
+  --olive:#16A34A;--olive-l:#F0FDF4;
+  --rose:#DB2777;--rose-l:#FDF2F8;
+  --gd:#1F2937;--gm:#6B7280;--gl:#F9FAFB;--gb:#E5E7EB;
+  --white:#fff;
+  --shadow:0 4px 20px rgba(13,27,62,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--gd);background:#EEF2F7;line-height:1.6;font-size:15px}
+.wrap{max-width:940px;margin:0 auto;padding:0 18px 60px}
+
+/* COVER */
+.cover{background:linear-gradient(140deg,#0D1B3E 0%,#162952 55%,#1A3A7C 100%);
+  color:white;padding:64px 52px 56px;position:relative;overflow:hidden;
+  border-radius:0 0 28px 28px;margin-bottom:36px;
+  box-shadow:0 16px 48px rgba(13,27,62,.45)}
+.cover::before{content:'';position:absolute;top:-70px;right:-70px;width:300px;height:300px;
+  border-radius:50%;background:rgba(37,99,235,.16)}
+.cover::after{content:'';position:absolute;bottom:-50px;left:-50px;width:200px;height:200px;
+  border-radius:50%;background:rgba(217,119,6,.14)}
+.c-badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:5px 14px;font-size:11px;font-family:'Poppins',sans-serif;
+  font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:18px}
+.c-icon{font-size:52px;display:block;margin-bottom:16px;filter:drop-shadow(0 4px 10px rgba(37,99,235,.4))}
+.cover h1{font-family:'Poppins',sans-serif;font-size:40px;font-weight:900;line-height:1.1;margin-bottom:8px;
+  background:linear-gradient(135deg,#fff 0%,#BAD0FF 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cover h2{font-family:'Poppins',sans-serif;font-size:17px;font-weight:400;color:rgba(255,255,255,.65);margin-bottom:26px}
+.c-div{height:3px;width:72px;background:var(--gold);border-radius:2px;margin-bottom:22px}
+.c-meta{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:26px}
+.c-meta-i{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,.72)}
+.c-author{display:inline-flex;align-items:center;gap:11px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:11px;padding:11px 18px}
+.c-av{width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--sky),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:white;flex-shrink:0}
+.c-name{font-family:'Poppins',sans-serif;font-weight:600;font-size:14px}
+.c-role{font-size:11px;color:rgba(255,255,255,.55)}
+.c-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.c-pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;padding:3px 11px;font-size:11px;color:rgba(255,255,255,.78)}
+
+/* TOC */
+.toc{background:white;border-radius:14px;padding:26px;margin:0 0 28px;box-shadow:var(--shadow)}
+.toc-h{font-family:'Poppins',sans-serif;font-size:17px;font-weight:800;color:var(--navy);margin-bottom:18px}
+.toc-row{display:flex;align-items:center;gap:13px;padding:9px 0;border-bottom:1px solid var(--gb)}
+.toc-row:last-of-type{border-bottom:none}
+.toc-n{font-family:'Poppins',sans-serif;font-size:17px;font-weight:800;min-width:34px}
+.toc-c{flex:1}
+.toc-name{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--gd)}
+.toc-sub{font-size:11.5px;color:var(--gm)}
+.toc-t{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--gm);white-space:nowrap}
+.toc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;padding-top:18px;border-top:1px solid var(--gb)}
+.toc-stat{background:var(--gl);border-radius:9px;padding:12px 14px;text-align:center}
+.toc-stat .v{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:var(--navy)}
+.toc-stat .l{font-size:11px;color:var(--gm);margin-top:2px}
+
+/* MODULE */
+.mod{margin:0 0 28px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.mod-hdr{padding:22px 26px 18px;position:relative;overflow:hidden}
+.mod-hdr::after{content:'';position:absolute;right:-18px;top:-18px;width:110px;height:110px;
+  border-radius:50%;background:rgba(255,255,255,.06)}
+.mod-n{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:3px}
+.mod-t{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:white;margin-bottom:3px}
+.mod-s{font-size:12px;color:rgba(255,255,255,.6)}
+.mod-body{background:white;padding:26px}
+
+/* WARM-UP */
+.warmup{background:linear-gradient(135deg,var(--navy),#1A3A7C);border-radius:11px;padding:18px 22px;margin:18px 0}
+.wu-top{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.wu-title{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.8px}
+.wu-tag{background:rgba(245,158,11,.22);color:#FCD34D;border:1px solid rgba(245,158,11,.3);
+  border-radius:9px;font-size:10px;font-weight:700;padding:2px 7px;letter-spacing:.8px}
+.wu-q{background:rgba(255,255,255,.06);border-radius:7px;padding:8px 13px;margin:5px 0;
+  font-size:13px;color:rgba(255,255,255,.88);border-left:3px solid var(--sky);line-height:1.5}
+.wu-foot{margin-top:11px;padding:7px 13px;background:rgba(217,119,6,.16);
+  border-radius:7px;font-size:12px;font-weight:600;color:#FCD34D}
+
+/* CONCEPT BOX */
+.concept{border-radius:11px;padding:18px 22px;margin:18px 0;border-left:5px solid}
+.concept.blue{background:var(--gl);border-color:var(--sky)}
+.concept.teal{background:var(--teal-l);border-color:var(--teal)}
+.concept.gold{background:var(--gold-l);border-color:var(--gold)}
+.concept.purple{background:var(--purple-l);border-color:var(--purple)}
+.concept.coral{background:var(--coral-l);border-color:var(--coral)}
+.concept.olive{background:var(--olive-l);border-color:var(--olive)}
+.concept.navy{background:#EEF2FF;border-color:var(--navy)}
+.con-top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.con-icon{font-size:19px}
+.con-lbl{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}
+.concept.blue .con-lbl{color:var(--sky)}
+.concept.teal .con-lbl{color:var(--teal)}
+.concept.gold .con-lbl{color:var(--gold)}
+.concept.purple .con-lbl{color:var(--purple)}
+.concept.coral .con-lbl{color:var(--coral)}
+.concept.olive .con-lbl{color:var(--olive)}
+.concept.navy .con-lbl{color:var(--navy)}
+.con-title{font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:var(--gd);margin-bottom:7px}
+.con-body{font-size:13px;color:var(--gd);line-height:1.65}
+.con-list{list-style:none;padding:0;margin:8px 0 0}
+.con-list li{padding:3px 0 3px 18px;font-size:13px;position:relative;line-height:1.5}
+.con-list li::before{content:'▸';position:absolute;left:0;color:var(--gm);font-size:11px;top:5px}
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.con-kv{background:rgba(255,255,255,.65);border-radius:7px;padding:9px 11px}
+.con-kv .kk{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--gm);margin-bottom:2px}
+.con-kv .kv{font-size:12.5px;color:var(--gd)}
+
+/* DISCUSS */
+.discuss{border-radius:11px;padding:18px 22px;margin:18px 0}
+.discuss.teal{background:var(--teal-l);border:1.5px solid var(--teal)}
+.discuss.gold{background:var(--gold-l);border:1.5px solid var(--gold)}
+.discuss.coral{background:var(--coral-l);border:1.5px solid var(--coral)}
+.dis-title{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.8px;margin-bottom:11px}
+.discuss.teal .dis-title{color:var(--teal)}
+.discuss.gold .dis-title{color:var(--gold)}
+.discuss.coral .dis-title{color:var(--coral)}
+.dis-q{font-size:13.5px;padding:5px 0 5px 22px;position:relative;line-height:1.55}
+.dis-q::before{content:'💬';position:absolute;left:0;font-size:12px;top:6px}
+
+/* EXERCISE */
+.exercise{border-radius:11px;overflow:hidden;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.ex-hdr{padding:13px 18px;display:flex;align-items:center;gap:11px}
+.ex-n{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.3px;
+  text-transform:uppercase;color:rgba(255,255,255,.65)}
+.ex-type{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white}
+.ex-body{background:white;padding:18px 22px}
+.ex-inst{font-size:13px;color:var(--gd);margin-bottom:13px;border-left:3px solid var(--gb);
+  padding-left:11px;font-style:italic}
+.ex-row{display:flex;align-items:flex-start;gap:11px;padding:8px 0;border-bottom:1px solid var(--gb);font-size:13px}
+.ex-row:last-child{border-bottom:none}
+.ex-lbl{flex:1;color:var(--gd)}
+.ex-in{border-bottom:1.5px solid #93C5FD;min-width:200px;color:var(--gm);font-size:12.5px}
+
+/* QUICK CHECK */
+.qc{background:var(--gold-l);border:1.5px solid var(--gold);border-radius:11px;padding:18px 22px;margin:18px 0}
+.qc-title{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.8px;margin-bottom:11px}
+.qc-item{font-size:13.5px;padding:5px 0 5px 22px;position:relative;
+  border-bottom:1px dashed rgba(217,119,6,.22);color:var(--gd);line-height:1.5}
+.qc-item:last-child{border-bottom:none}
+.qc-item::before{content:attr(data-n);position:absolute;left:0;top:5px;
+  background:var(--gold);color:white;border-radius:50%;
+  width:16px;height:16px;display:inline-flex;align-items:center;
+  justify-content:center;font-size:9px;font-weight:700}
+
+/* PAIR WORK */
+.pair{border-radius:11px;overflow:hidden;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.pair-h{background:linear-gradient(135deg,var(--rose),#BE185D);padding:13px 18px;
+  font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:white}
+.pair-b{background:white;display:grid;grid-template-columns:1fr 1fr}
+.p-side{padding:16px 18px}
+.p-side:first-child{border-right:1px solid var(--gb)}
+.p-role{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px}
+.p-side:first-child .p-role{color:var(--rose)}
+.p-side:last-child .p-role{color:var(--sky)}
+.p-txt{font-size:13px;color:var(--gd);line-height:1.6}
+
+/* REFLECTION */
+.reflect{background:var(--teal-l);border:1.5px solid var(--teal);border-radius:11px;padding:18px 22px;margin:18px 0}
+.ref-title{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--teal);
+  text-transform:uppercase;letter-spacing:.8px;margin-bottom:9px}
+.write-line{border-bottom:1.5px solid var(--gb);height:26px;margin:5px 0}
+
+/* GRID TABLE */
+.gtable{width:100%;border-collapse:collapse;margin:12px 0;font-size:12.5px}
+.gtable th{background:var(--navy);color:white;padding:8px 11px;
+  font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;text-align:left}
+.gtable td{padding:7px 11px;border-bottom:1px solid var(--gb);vertical-align:top;line-height:1.5}
+.gtable tr:nth-child(even) td{background:var(--gl)}
+.gtable tr:last-child td{border-bottom:none}
+
+/* EMAIL MOCK */
+.email{border:1.5px solid var(--gb);border-radius:11px;overflow:hidden;margin:14px 0;
+  box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.e-top{padding:10px 16px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
+  color:white;display:flex;align-items:center;gap:7px}
+.e-fields{background:#FAFBFF;padding:10px 16px;border-bottom:1px solid var(--gb)}
+.e-field{display:flex;align-items:baseline;gap:9px;padding:3.5px 0;border-bottom:1px dashed var(--gb);font-size:12.5px}
+.e-field:last-child{border-bottom:none}
+.e-lbl{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--gm);min-width:56px}
+.e-val{color:var(--gd);font-size:12.5px;line-height:1.4}
+.e-val.subj{font-weight:600;color:var(--navy)}
+.e-body{background:white;padding:14px 18px;font-size:13px;line-height:1.7;color:var(--gd)}
+.e-body p{margin-bottom:9px}
+.e-body p:last-child{margin-bottom:0}
+.e-sig{color:var(--gm)!important;font-size:12px;margin-top:10px!important;
+  border-top:1px solid var(--gb);padding-top:9px!important}
+
+/* COMPARE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+.cmp-h{padding:9px 13px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px}
+.cmp-h.do{background:var(--olive);color:white}
+.cmp-h.dont{background:var(--coral);color:white}
+.cmp-b{padding:11px 13px}
+.cmp-b.do{background:var(--olive-l)}
+.cmp-b.dont{background:var(--coral-l)}
+.cmp-item{font-size:12.5px;padding:4px 0 4px 17px;position:relative;
+  border-bottom:1px dashed rgba(0,0,0,.07);color:var(--gd);line-height:1.5}
+.cmp-item:last-child{border-bottom:none}
+.cmp-b.do .cmp-item::before{content:'✓';position:absolute;left:0;color:var(--olive);font-size:11px}
+.cmp-b.dont .cmp-item::before{content:'✗';position:absolute;left:0;color:var(--coral);font-size:11px}
+
+/* MISTAKES */
+.mistake{border:1px solid var(--gb);border-radius:9px;overflow:hidden;margin:10px 0}
+.mist-lbl{background:var(--coral-l);padding:8px 13px;font-family:'Poppins',sans-serif;
+  font-size:11.5px;font-weight:700;color:var(--coral);border-bottom:1px solid var(--gb)}
+.mist-cols{display:grid;grid-template-columns:1fr 1fr}
+.mist-bad,.mist-good{padding:10px 13px;font-size:12.5px;line-height:1.55}
+.mist-bad{background:#FFF7F7;border-right:1px solid var(--gb)}
+.mist-good{background:#F7FFF9}
+.mist-col-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.mist-col-lbl.bad{color:var(--coral)}
+.mist-col-lbl.good{color:var(--olive)}
+.mist-tip{background:var(--gl);padding:7px 13px;border-top:1px solid var(--gb);font-size:12px;color:var(--gm)}
+
+/* PARTS */
+.parts{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.part{display:flex;align-items:stretch;border-radius:9px;overflow:hidden;border:1px solid var(--gb)}
+.p-num{display:flex;align-items:center;justify-content:center;min-width:44px;
+  font-family:'Poppins',sans-serif;font-weight:800;font-size:17px;color:white}
+.p-body{padding:11px 14px;background:white;flex:1}
+.p-name{font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:700;margin-bottom:3px}
+.p-desc{font-size:12px;color:var(--gm);margin-bottom:3px;line-height:1.5}
+.p-ex{font-size:11.5px;color:var(--gd);font-style:italic}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:9px;margin:12px 0}
+.step{display:flex;gap:14px;border-radius:9px;overflow:hidden;border:1px solid var(--gb)}
+.st-num{display:flex;align-items:center;justify-content:center;min-width:50px;
+  font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:white}
+.st-body{padding:13px 15px;flex:1;background:white}
+.st-name{font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:700;margin-bottom:3px}
+.st-desc{font-size:12.5px;color:var(--gm);margin-bottom:5px}
+.st-buls{list-style:none;padding:0}
+.st-buls li{font-size:12px;color:var(--gd);padding:2px 0 2px 17px;position:relative;line-height:1.5}
+.st-buls li::before{content:'→';position:absolute;left:0;color:var(--gm);font-size:10px;top:4px}
+
+/* TYPE CARDS */
+.types{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:12px 0}
+.tc{border-radius:9px;overflow:hidden;border:1px solid var(--gb)}
+.tc-h{padding:9px 13px;display:flex;align-items:center;gap:9px}
+.tc-icon{font-size:17px}
+.tc-name{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;color:white}
+.tc-b{padding:11px 13px;background:white}
+.tc-desc{font-size:12px;color:var(--gd);margin-bottom:7px;line-height:1.5}
+.tc-starters{list-style:none;padding:0}
+.tc-starters li{font-size:11.5px;color:var(--gm);padding:2px 0 2px 13px;position:relative;font-style:italic;line-height:1.5}
+.tc-starters li::before{content:'➤';position:absolute;left:0;font-size:10px;top:3px}
+
+/* CHECKLIST */
+.cl{margin:12px 0}
+.cl-item{display:flex;align-items:flex-start;gap:9px;padding:7px 11px;
+  border-bottom:1px solid var(--gb);font-size:13px}
+.cl-item:nth-child(even){background:var(--gl)}
+.cl-item:last-child{border-bottom:none}
+.cl-box{width:17px;height:17px;border:2px solid var(--gb);border-radius:4px;flex-shrink:0;margin-top:1px}
+
+/* PEER REVIEW */
+.peer{border:1px solid var(--gb);border-radius:9px;overflow:hidden;margin:12px 0}
+.peer-row{display:flex;align-items:center;gap:11px;padding:7px 14px;border-bottom:1px solid var(--gb);font-size:13px}
+.peer-row:nth-child(even){background:var(--gl)}
+.peer-row:last-child{border-bottom:none}
+.peer-cb{width:17px;height:17px;border:2px solid var(--purple);border-radius:4px;flex-shrink:0}
+.peer-text{flex:1;color:var(--gd)}
+.peer-score{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--purple)}
+
+/* REGISTER TABLE */
+.reg-band{border-radius:9px;overflow:hidden;margin:12px 0;border:1px solid var(--gb)}
+.reg-row{display:flex;border-bottom:1px solid var(--gb);font-size:12.5px}
+.reg-row:last-child{border-bottom:none}
+.reg-row.hdr{background:var(--navy)}
+.reg-row.hdr span{color:white;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.reg-row span{flex:1;padding:8px 11px;line-height:1.4}
+.reg-row:nth-child(2){background:#EEF6FF}
+.reg-row:nth-child(3){background:#FFFBEE}
+.reg-row:nth-child(4){background:#EFFFF2}
+
+/* TAGS */
+.tag{display:inline-block;border-radius:5px;padding:1px 7px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.tag.f{background:#EEF6FF;color:var(--blue)}
+.tag.sf{background:var(--gold-l);color:var(--gold)}
+.tag.inf{background:var(--olive-l);color:var(--olive)}
+code{font-family:'Courier New',monospace;background:#F1F5F9;color:var(--blue);padding:1px 6px;border-radius:4px;font-size:12.5px}
+
+/* FOOTER */
+.footer{background:var(--navy);color:white;padding:18px 26px;border-radius:14px;
+  margin-top:36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:11px}
+.f-brand{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700}
+.f-sub{font-size:11px;color:rgba(255,255,255,.48);margin-top:2px}
+.f-copy{font-size:11px;color:rgba(255,255,255,.38)}
+
+/* SUMMARY */
+.summary{background:white;border-radius:14px;padding:26px;box-shadow:var(--shadow);margin-top:28px}
+.sum-h{font-family:'Poppins',sans-serif;font-size:17px;font-weight:800;color:var(--navy);margin-bottom:14px}
+
+.sticky-header{position:sticky;top:0;z-index:200;background:#fff;
+  border-bottom:2px solid #E5E7EB;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.sticky-inner{display:flex;align-items:center;gap:10px;padding:7px 16px;flex-wrap:wrap}
+.sticky-brand{font-family:"Poppins",sans-serif;font-size:11px;color:#0D1B3E;white-space:nowrap;flex-shrink:0}
+.mod-nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav-btn{width:29px;height:29px;border:2px solid #E5E7EB;background:#fff;border-radius:6px;
+  font-family:"Poppins",sans-serif;font-weight:700;font-size:10.5px;color:#6B7280;
+  cursor:pointer;transition:all .15s;flex-shrink:0}
+.nav-btn:hover{border-color:#2563EB;color:#2563EB;background:#EFF6FF}
+.nav-btn.active{background:#0D1B3E;border-color:#0D1B3E;color:#fff}
+.prog-wrap{display:flex;align-items:center;gap:7px;flex:1;min-width:80px}
+.prog-track{flex:1;height:5px;background:#E5E7EB;border-radius:3px}
+.prog-fill{height:5px;background:linear-gradient(90deg,#2563EB,#0D9488);border-radius:3px;
+  width:0%;transition:width .35s ease}
+.prog-txt{font-family:"Poppins",sans-serif;font-size:10px;font-weight:700;color:#6B7280;white-space:nowrap}
+.reset-btn{border:1.5px solid #DC2626;background:#fff;border-radius:7px;padding:5px 10px;
+  font-size:11px;font-weight:700;color:#DC2626;cursor:pointer;font-family:"Poppins",sans-serif;
+  transition:all .15s;white-space:nowrap}
+.reset-btn:hover{background:#DC2626;color:#fff}
+input[type=checkbox].cl-box{width:17px;height:17px;border-radius:4px;cursor:pointer;
+  accent-color:#16A34A;flex-shrink:0;margin-top:2px}
+input[type=checkbox].peer-cb{width:17px;height:17px;border-radius:4px;cursor:pointer;
+  accent-color:#7C3AED;flex-shrink:0}
+.ex-in[contenteditable]{display:inline-block;border-bottom:2px solid #93C5FD;min-width:155px;
+  padding:1px 5px;color:#1F2937;font-size:13px;outline:none;border-radius:3px 3px 0 0;
+  transition:background .15s,border-color .15s;vertical-align:baseline}
+.ex-in[contenteditable]:empty::before{content:"type answer...";color:#9CA3AF;font-style:italic}
+.ex-in[contenteditable]:focus{background:#EFF6FF;border-color:#2563EB}
+.ex-row:focus-within{background:#F8FAFF;border-radius:5px}
+.asn-group{display:flex;gap:6px;align-items:center}
+.asn-btn{border:2px solid #E5E7EB;background:#fff;border-radius:8px;width:36px;height:36px;
+  font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;cursor:pointer;
+  transition:all .15s;color:#6B7280}
+.asn-btn:hover{border-color:#2563EB;color:#2563EB;background:#EFF6FF}
+.asn-btn[data-v="A"].active-sel{background:#16A34A;border-color:#16A34A;color:#fff}
+.asn-btn[data-v="S"].active-sel{background:#D97706;border-color:#D97706;color:#fff}
+.asn-btn[data-v="N"].active-sel{background:#DC2626;border-color:#DC2626;color:#fff}
+.reveal-btn{display:inline-flex;align-items:center;margin-left:8px;border:1.5px solid #D97706;
+  background:#fff;border-radius:5px;padding:2px 9px;font-size:10px;font-weight:700;
+  color:#D97706;cursor:pointer;font-family:"Poppins",sans-serif;transition:all .15s;vertical-align:middle}
+.reveal-btn:hover,.reveal-btn.open{background:#D97706;color:#fff}
+.qc-answer{margin-top:7px;padding:8px 12px;background:#FFFBEB;border-radius:7px;
+  border-left:3px solid #D97706;font-size:13px;line-height:1.55}
+.write-line[contenteditable]{border-bottom:1.5px solid #E5E7EB;min-height:27px;padding:2px 4px;
+  outline:none;font-size:13.5px;color:#1F2937;display:block;border-radius:2px;
+  transition:background .15s,border-color .15s}
+.write-line[contenteditable]:empty::before{content:"Write here...";color:#9CA3AF;font-style:italic;font-size:12px}
+.write-line[contenteditable]:focus{background:#F0FDFA;border-color:#0D9488}
+.video-block{background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(13,27,62,.10);margin:0 0 20px}
+.video-header{padding:13px 20px;display:flex;align-items:center;gap:11px;
+  background:linear-gradient(135deg,#0D1B3E,#1A3A7C)}
+.v-icon{font-size:20px;color:#fff}
+.v-label{font-family:"Poppins",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:1.3px;
+  text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:1px}
+.v-title{font-family:"Poppins",sans-serif;font-size:13px;font-weight:700;color:#fff}
+.v-badge{margin-left:auto;background:rgba(220,38,38,.85);color:#fff;border-radius:6px;
+  padding:3px 9px;font-size:10px;font-weight:700;font-family:"Poppins",sans-serif;flex-shrink:0}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-footer{padding:9px 20px;background:#F9FAFB;border-top:1px solid #E5E7EB;font-size:12px;color:#6B7280}
+.quiz-block{background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(13,27,62,.10);margin:0 0 28px}
+.quiz-hdr{padding:14px 20px;background:linear-gradient(135deg,#4C1D95,#7C3AED);
+  display:flex;align-items:center;gap:11px}
+.q-lbl{font-family:"Poppins",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:1.3px;
+  text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:1px}
+.q-title{font-family:"Poppins",sans-serif;font-size:13px;font-weight:700;color:#fff}
+.q-score-wrap{margin-left:auto;text-align:right;flex-shrink:0}
+.q-score{font-family:"Poppins",sans-serif;font-size:20px;font-weight:800;color:#fff}
+.q-slbl{font-size:9px;color:rgba(255,255,255,.5)}
+.quiz-body{padding:22px}
+.quiz-prog{height:5px;background:#E5E7EB;border-radius:3px;margin-bottom:20px}
+.quiz-prog-fill{height:5px;background:linear-gradient(90deg,#7C3AED,#2563EB);border-radius:3px;
+  width:0%;transition:width .4s ease}
+.q-card{display:none}
+.q-card.active{display:block;animation:qfade .2s ease}
+@keyframes qfade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.q-num{font-family:"Poppins",sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.8px;color:#6B7280;margin-bottom:8px}
+.q-text{font-family:"Poppins",sans-serif;font-size:15px;font-weight:600;color:#0D1B3E;
+  margin-bottom:16px;line-height:1.5}
+.q-opts{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+.q-opt{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border:2px solid #E5E7EB;
+  border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s;
+  background:#fff;text-align:left;width:100%}
+.q-opt:hover:not(:disabled){border-color:#7C3AED;background:#F5F3FF}
+.opt-letter{font-family:"Poppins",sans-serif;font-weight:700;font-size:12px;color:#7C3AED;
+  min-width:22px;height:22px;border:2px solid #7C3AED;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}
+.opt-text{font-size:13.5px;color:#1F2937;line-height:1.5;text-align:left}
+.q-opt.q-correct{border-color:#16A34A !important;background:#F0FDF4 !important;cursor:default}
+.q-opt.q-correct .opt-letter{background:#16A34A;border-color:#16A34A;color:#fff}
+.q-opt.q-correct .opt-text{color:#166534}
+.q-opt.q-wrong{border-color:#DC2626 !important;background:#FEF2F2 !important;cursor:default}
+.q-opt.q-wrong .opt-letter{background:#DC2626;border-color:#DC2626;color:#fff}
+.q-opt.q-wrong .opt-text{color:#991B1B}
+.q-opt.q-reveal{border-color:#16A34A !important;background:#F0FDF4 !important;opacity:.65;cursor:default}
+.q-opt.q-reveal .opt-letter{background:#16A34A;border-color:#16A34A;color:#fff}
+.q-opt:disabled{cursor:default}
+.q-fb{padding:10px 14px;border-radius:9px;font-size:13px;line-height:1.5;margin-bottom:14px}
+.q-fb.ok{background:#F0FDF4;border-left:3px solid #16A34A;color:#166534}
+.q-fb.no{background:#FEF2F2;border-left:3px solid #DC2626;color:#991B1B}
+.q-nav-row{display:flex;justify-content:flex-end}
+.q-next-btn{background:#7C3AED;color:#fff;border:none;border-radius:9px;
+  padding:9px 22px;font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;
+  cursor:pointer;transition:background .15s}
+.q-next-btn:hover{background:#6D28D9}
+.q-result{text-align:center;padding:28px 20px}
+.score-circle{width:80px;height:80px;border-radius:50%;margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Poppins",sans-serif;font-size:24px;font-weight:800;color:#fff;background:#6B7280}
+.score-msg{font-family:"Poppins",sans-serif;font-size:16px;font-weight:700;
+  color:#0D1B3E;margin-bottom:6px}
+.score-sub{font-size:13px;color:#6B7280;margin-bottom:20px;line-height:1.5}
+.q-retry{background:#7C3AED;color:#fff;border:none;border-radius:9px;
+  padding:10px 26px;font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;
+  cursor:pointer;transition:background .15s}
+.q-retry:hover{background:#6D28D9}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:999;
+  display:flex;align-items:center;justify-content:center}
+.modal-box{background:#fff;border-radius:14px;padding:30px;max-width:340px;
+  width:90%;box-shadow:0 20px 50px rgba(0,0,0,.22);text-align:center}
+.modal-title{font-family:"Poppins",sans-serif;font-size:15px;font-weight:700;
+  color:#0D1B3E;margin-bottom:9px}
+.modal-msg{font-size:13px;color:#6B7280;margin-bottom:20px;line-height:1.55}
+.modal-btns{display:flex;gap:9px;justify-content:center}
+.modal-cancel{border:1.5px solid #E5E7EB;background:#fff;border-radius:8px;
+  padding:8px 20px;font-family:"Poppins",sans-serif;font-weight:600;font-size:13px;
+  color:#6B7280;cursor:pointer;transition:all .15s}
+.modal-cancel:hover{background:#F9FAFB}
+.modal-ok{background:#DC2626;border:none;border-radius:8px;padding:8px 20px;
+  font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;
+  color:#fff;cursor:pointer;transition:background .15s}
+.modal-ok:hover{background:#B91C1C}
+</style>
+</head>
+<body>
+<div class="sticky-header"><div class="sticky-inner"><span class="sticky-brand"><strong>Fabio Busse</strong> &mdash; Professional Emails</span><nav class="mod-nav"><button type="button" class="nav-btn" data-type="goto" data-target="mod-01">01</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-02">02</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-03">03</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-04">04</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-05">05</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-06">06</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-07">07</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-08">08</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-09">09</button><button type="button" class="nav-btn" data-type="goto" data-target="mod-10">10</button></nav><div class="prog-wrap"><div class="prog-track"><div class="prog-fill" id="pfill"></div></div><span class="prog-txt" id="ptxt">0/0</span></div><button type="button" class="reset-btn" data-type="reset">&#8635; Reset</button></div></div>
+<div class="wrap">
+
+
+<!-- COVER -->
+<div class="cover">
+  <span class="c-badge">Business English · 3-Hour Interactive Course</span>
+  <span class="c-icon">✉</span>
+  <h1>MASTERING<br>PROFESSIONAL<br>EMAILS</h1>
+  <h2>A Complete Interactive Course in Business English</h2>
+  <div class="c-div"></div>
+  <div class="c-meta">
+    <span class="c-meta-i">⏱ 3 Hours Intensive</span>
+    <span class="c-meta-i">🎯 Intermediate – Advanced (B2+)</span>
+    <span class="c-meta-i">📖 Communicative Method</span>
+    <span class="c-meta-i">✏️ 30+ Activities</span>
+  </div>
+  <div class="c-author">
+    <div class="c-av">FB</div>
+    <div>
+      <div class="c-name">Fabio Busse</div>
+      <div class="c-role">Business English Instructor · Curitiba, Paraná, Brasil</div>
+    </div>
+  </div>
+  <div class="c-pills">
+    <span class="c-pill">📚 Concept Boxes</span>
+    <span class="c-pill">🔥 Warm-Ups</span>
+    <span class="c-pill">💬 Discussion</span>
+    <span class="c-pill">✏️ Exercises</span>
+    <span class="c-pill">👥 Pair Work</span>
+    <span class="c-pill">📧 Email Models</span>
+    <span class="c-pill">📋 Case Studies</span>
+    <span class="c-pill">⚡ Quick Checks</span>
+    <span class="c-pill">✅ Peer Review</span>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-h">📋 Course Contents</div>
+  <div class="toc-row"><span class="toc-n" style="color:#0D1B3E">01</span><div class="toc-c"><div class="toc-name">Warm-Up &amp; Context</div><div class="toc-sub">Why emails matter · Your habits · Register</div></div><span class="toc-t">15 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#2563EB">02</span><div class="toc-c"><div class="toc-name">Email Anatomy</div><div class="toc-sub">8 components · Matching · Ordering</div></div><span class="toc-t">20 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#0D9488">03</span><div class="toc-c"><div class="toc-name">Step-by-Step Writing Process</div><div class="toc-sub">7 steps · BLOT · Subject lines · Planning</div></div><span class="toc-t">25 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#D97706">04</span><div class="toc-c"><div class="toc-name">Types of Business Emails</div><div class="toc-sub">8 categories · Identification · Starters</div></div><span class="toc-t">20 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#7C3AED">05</span><div class="toc-c"><div class="toc-name">Vocabulary &amp; Phrases Bank</div><div class="toc-sub">Openings · Requests · Closings · Sign-offs</div></div><span class="toc-t">25 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#DC2626">06</span><div class="toc-c"><div class="toc-name">Common Mistakes &amp; Corrections</div><div class="toc-sub">8 critical errors · Error correction · Rewriting</div></div><span class="toc-t">20 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#1A3A7C">07</span><div class="toc-c"><div class="toc-name">Best Practices &amp; Tone</div><div class="toc-sub">Golden rules · Tone ladder · Checklist</div></div><span class="toc-t">15 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#0369A1">08</span><div class="toc-c"><div class="toc-name">Email Examples Gallery</div><div class="toc-sub">4 models · Analysis · Role plays</div></div><span class="toc-t">25 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#0F766E">09</span><div class="toc-c"><div class="toc-name">Case Studies</div><div class="toc-sub">2 cases · Analysis · Rewriting</div></div><span class="toc-t">15 min</span></div>
+  <div class="toc-row"><span class="toc-n" style="color:#7C3AED">10</span><div class="toc-c"><div class="toc-name">Final Practice</div><div class="toc-sub">Full writing · Peer review · Reflection</div></div><span class="toc-t">40 min</span></div>
+  <div class="toc-stats">
+    <div class="toc-stat"><div class="v">3h</div><div class="l">Total Duration</div></div>
+    <div class="toc-stat"><div class="v">B2+</div><div class="l">CEFR Level</div></div>
+    <div class="toc-stat"><div class="v">30+</div><div class="l">Activities</div></div>
+  </div>
+</div>
+
+<!-- MODULE 1 -->
+<div class="video-block">
+  <div class="video-header"><span class="v-icon">&#9654;</span><div>
+  <div class="v-label">Video &middot; Before Module 1</div>
+  <div class="v-title">8 Email Etiquette Tips &mdash; How to Write Better Emails at Work</div>
+  </div><span class="v-badge">&#9654; WATCH FIRST</span></div>
+  <div class="video-wrap"><iframe src="https://www.youtube.com/embed/1XctnF7C74s"
+    title="8 Email Etiquette Tips" allowfullscreen loading="lazy"
+    allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture">
+  </iframe></div>
+  <div class="video-footer">&#128204; Watch this video, then answer the quiz below before starting Module 1</div>
+</div>
+<div class="quiz-block" id="quiz1"><div class="quiz-hdr"><span style="font-size:20px">&#129504;</span><div><div class="q-lbl">Quiz · Video 1 — 8 Email Etiquette Tips</div><div class="q-title">Test your understanding — 5 questions, 4 alternatives each</div></div><div class="q-score-wrap"><div class="q-score" id="quiz1-sc">0/5</div><div class="q-slbl">SCORE</div></div></div><div class="quiz-body"><div class="quiz-prog"><div class="quiz-prog-fill" id="quiz1-pg"></div></div><div class="q-card  active" id="quiz1-q0"><div class="q-num">Question 1 of 5</div><div class="q-text">According to the video, what is the MAIN reason to learn email etiquette at work?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="0" data-oi="0" data-correct="1"><span class="opt-letter">A</span><span class="opt-text">It is required by most company HR policies</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="0" data-oi="1" data-correct="1"><span class="opt-letter">B</span><span class="opt-text">It improves how competent and professional you appear to colleagues</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="0" data-oi="2" data-correct="1"><span class="opt-letter">C</span><span class="opt-text">Emails are monitored by managers as performance metrics</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="0" data-oi="3" data-correct="1"><span class="opt-letter">D</span><span class="opt-text">It saves time compared to phone calls and face-to-face meetings</span></button></div><div class="q-fb ok" id="quiz1-ok0" hidden>&#10003; Correct! The video opens by explaining that email etiquette directly improves how competent you appear in the eyes of colleagues.</div><div class="q-fb no" id="quiz1-no0" hidden>&#10007; The video focuses on professional image — learning email etiquette improves how competent you appear to your colleagues.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz1-nx0" hidden data-type="quiz-next" data-qid="quiz1" data-qi="0" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz1-q1"><div class="q-num">Question 2 of 5</div><div class="q-text">Which of the following best summarises the key advice from the video for writing work emails?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="1" data-oi="0" data-correct="2"><span class="opt-letter">A</span><span class="opt-text">Write long, detailed emails to demonstrate effort and thoroughness</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="1" data-oi="1" data-correct="2"><span class="opt-letter">B</span><span class="opt-text">Use informal language to build rapport and seem more approachable</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="1" data-oi="2" data-correct="2"><span class="opt-letter">C</span><span class="opt-text">Keep emails focused, clear, and to the point</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="1" data-oi="3" data-correct="2"><span class="opt-letter">D</span><span class="opt-text">Always CC your manager to show full transparency</span></button></div><div class="q-fb ok" id="quiz1-ok1" hidden>&#10003; Correct! The video consistently emphasises keeping emails focused, clear, and concise.</div><div class="q-fb no" id="quiz1-no1" hidden>&#10007; The video recommends keeping emails focused, clear, and to the point — not longer or more informal.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz1-nx1" hidden data-type="quiz-next" data-qid="quiz1" data-qi="1" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz1-q2"><div class="q-num">Question 3 of 5</div><div class="q-text">What does the video advise about writing the subject line of a business email?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="2" data-oi="0" data-correct="2"><span class="opt-letter">A</span><span class="opt-text">The subject line is optional for internal emails</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="2" data-oi="1" data-correct="2"><span class="opt-letter">B</span><span class="opt-text">Use a vague subject line so the reader opens it out of curiosity</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="2" data-oi="2" data-correct="2"><span class="opt-letter">C</span><span class="opt-text">The subject line should be specific and accurately reflect the email content</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="2" data-oi="3" data-correct="2"><span class="opt-letter">D</span><span class="opt-text">Always begin every subject line with "RE:" to look organised</span></button></div><div class="q-fb ok" id="quiz1-ok2" hidden>&#10003; Correct! A specific, accurate subject line is one of the key etiquette tips highlighted in the video.</div><div class="q-fb no" id="quiz1-no2" hidden>&#10007; The video recommends a specific subject line that clearly and accurately reflects the email content.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz1-nx2" hidden data-type="quiz-next" data-qid="quiz1" data-qi="2" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz1-q3"><div class="q-num">Question 4 of 5</div><div class="q-text">What is the video's advice about proofreading before sending an email?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="3" data-oi="0" data-correct="1"><span class="opt-letter">A</span><span class="opt-text">Only proofread emails sent to external clients, not internal ones</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="3" data-oi="1" data-correct="1"><span class="opt-letter">B</span><span class="opt-text">Proofreading is always essential — errors damage your professional image</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="3" data-oi="2" data-correct="1"><span class="opt-letter">C</span><span class="opt-text">Spell-check software is sufficient — manual reading is unnecessary</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="3" data-oi="3" data-correct="1"><span class="opt-letter">D</span><span class="opt-text">Only check grammar; tone and structure are less important</span></button></div><div class="q-fb ok" id="quiz1-ok3" hidden>&#10003; Correct! The video is explicit: proofreading is always essential. Errors damage your professional credibility.</div><div class="q-fb no" id="quiz1-no3" hidden>&#10007; The video stresses that proofreading is always essential — errors in any email affect how professional you appear.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz1-nx3" hidden data-type="quiz-next" data-qid="quiz1" data-qi="3" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz1-q4"><div class="q-num">Question 5 of 5</div><div class="q-text">According to the video, when is it appropriate to use "Reply All"?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="4" data-oi="0" data-correct="2"><span class="opt-letter">A</span><span class="opt-text">Every time, to ensure complete transparency with everyone</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="4" data-oi="1" data-correct="2"><span class="opt-letter">B</span><span class="opt-text">Only when replying to your direct manager or supervisor</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="4" data-oi="2" data-correct="2"><span class="opt-letter">C</span><span class="opt-text">Only when your reply is genuinely relevant to every person on the thread</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz1" data-qi="4" data-oi="3" data-correct="2"><span class="opt-letter">D</span><span class="opt-text">Only when the original email was sent company-wide</span></button></div><div class="q-fb ok" id="quiz1-ok4" hidden>&#10003; Correct! Reply All should only be used when your message is genuinely relevant to every recipient.</div><div class="q-fb no" id="quiz1-no4" hidden>&#10007; The video advises: use Reply All ONLY when every recipient actually needs your reply — otherwise it wastes people's time.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz1-nx4" hidden data-type="quiz-next" data-qid="quiz1" data-qi="4" data-total="5">See my score &#8594;</button></div></div><div class="q-result" id="quiz1-res" hidden><div class="score-circle" id="quiz1-circ">?</div><div class="score-msg" id="quiz1-msg"></div><div class="score-sub" id="quiz1-sub"></div><button type="button" class="q-retry" data-type="quiz-retry" data-qid="quiz1" data-total="5">&#8635; Try Again</button></div></div></div>
+<div class="mod" id="mod-01">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#0D1B3E,#1A3A7C)">
+<div class="mod-n">Module 01</div><div class="mod-t">Warm-Up &amp; Context</div>
+<div class="mod-s">⏱ 15 min · Discussion + Survey + Register Activation</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up — Talk About It!</span><span class="wu-tag">PAIR WORK</span></div>
+<div class="wu-q">How many emails do you write or receive on a typical workday?</div>
+<div class="wu-q">What is the most difficult thing about writing a professional email in English?</div>
+<div class="wu-q">Have you ever made a mistake in a business email? What happened?</div>
+<div class="wu-q">What 5 words describe a PERFECT professional email?</div>
+<div class="wu-foot">💬 Discuss with a partner for 3 minutes. Share one answer with the class.</div></div>
+
+<div class="concept blue">
+<div class="con-top"><span class="con-icon">📚</span><span class="con-lbl">CONCEPT · What Is a Business Email?</span></div>
+<div class="con-title">Definition: Business Email</div>
+<div class="con-body">A <strong>business email</strong> is a formal or semi-formal written communication used in professional contexts to exchange information, make requests, confirm agreements, manage relationships, and conduct commercial transactions. Unlike personal messages, every business email must reflect <strong>professionalism</strong>, <strong>clarity</strong>, and <strong>respect for the reader</strong>.
+<ul class="con-list">
+<li>Creates a <strong>permanent written record</strong> — every word can be saved, forwarded, or printed</li>
+<li>Represents not just you, but your <strong>entire organisation</strong></li>
+<li>Requires careful choice of <strong>register, tone, and vocabulary</strong></li>
+<li>Over <strong>300 billion</strong> emails are sent worldwide every single day</li>
+</ul></div></div>
+
+<div class="concept teal">
+<div class="con-top"><span class="con-icon">📐</span><span class="con-lbl">CONCEPT · Register in Email</span></div>
+<div class="con-title">What Is Register?</div>
+<div class="con-body"><strong>Register</strong> is the level of formality you choose when writing. Using the wrong register is one of the most common and damaging mistakes. Always match your language to your audience and context.</div>
+<div class="reg-band" style="margin-top:10px">
+<div class="reg-row hdr"><span>Register</span><span>Use When</span><span>Opening Example</span><span>Sign-off</span></div>
+<div class="reg-row"><span>🔵 <strong>Formal</strong></span><span>New clients, executives, legal</span><span><code>Dear Mr./Ms. [Surname],</code></span><span>Yours sincerely,</span></div>
+<div class="reg-row"><span>🟡 <strong>Semi-Formal</strong></span><span>Regular contacts you know</span><span><code>Dear [First Name], / Hi Sarah,</code></span><span>Best regards,</span></div>
+<div class="reg-row"><span>🟢 <strong>Informal</strong></span><span>Close colleagues, internal</span><span><code>Hey Mike, / Hi!</code></span><span>Thanks, / Best,</span></div>
+</div></div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">
+<div><div class="ex-n">Exercise 1A</div><div class="ex-type">Survey — Rate Your Email Habits</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Circle your answer for each statement: Always (A) · Sometimes (S) · Never (N)</div>
+<div class="ex-row"><span class="ex-lbl">I re-read my emails before sending.</span><span class="asn-group"><button type="button" class="asn-btn" data-v="A">A</button><button type="button" class="asn-btn" data-v="S">S</button><button type="button" class="asn-btn" data-v="N">N</button></span></div>
+<div class="ex-row"><span class="ex-lbl">I always use the recipient's name in the greeting.</span><span class="asn-group"><button type="button" class="asn-btn" data-v="A">A</button><button type="button" class="asn-btn" data-v="S">S</button><button type="button" class="asn-btn" data-v="N">N</button></span></div>
+<div class="ex-row"><span class="ex-lbl">My subject lines are specific and clear.</span><span class="asn-group"><button type="button" class="asn-btn" data-v="A">A</button><button type="button" class="asn-btn" data-v="S">S</button><button type="button" class="asn-btn" data-v="N">N</button></span></div>
+<div class="ex-row"><span class="ex-lbl">I include a call to action with a deadline.</span><span class="asn-group"><button type="button" class="asn-btn" data-v="A">A</button><button type="button" class="asn-btn" data-v="S">S</button><button type="button" class="asn-btn" data-v="N">N</button></span></div>
+<div class="ex-row"><span class="ex-lbl">I match my register to the reader.</span><span class="asn-group"><button type="button" class="asn-btn" data-v="A">A</button><button type="button" class="asn-btn" data-v="S">S</button><button type="button" class="asn-btn" data-v="N">N</button></span></div>
+<p style="margin-top:11px;font-size:13px;color:var(--purple)">➡ Compare answers with a partner. What do you BOTH most need to improve?</p>
+</div></div>
+
+<div class="qc"><div class="qc-title">⚡ Quick Check</div>
+<div class="qc-item" data-n="1">A formal email uses the sign-off "Hey, cheers!" — True or False?<button type="button" class="reveal-btn" data-type="reveal" data-target="qc1">Reveal</button><div class="qc-answer" id="qc1" hidden><strong style="color:#16A34A">False</strong> — <span style="color:#6B7280">Formal emails use "Yours sincerely," or "Best regards,"</span></div></div>
+<div class="qc-item" data-n="2">You should match your register to your ______________ (audience / computer / deadline).<button type="button" class="reveal-btn" data-type="reveal" data-target="qc2">Reveal</button><div class="qc-answer" id="qc2" hidden><strong style="color:#16A34A">audience</strong> — <span style="color:#6B7280">Register always matches the reader: formal, semi-formal or informal.</span></div></div>
+<div class="qc-item" data-n="3">Emails create a permanent ______________ record (verbal / written / audio).<button type="button" class="reveal-btn" data-type="reveal" data-target="qc3">Reveal</button><div class="qc-answer" id="qc3" hidden><strong style="color:#16A34A">written</strong> — <span style="color:#6B7280">Emails create a permanent WRITTEN record.</span></div></div>
+<div class="qc-item" data-n="4">"Dear Ms. Thompson," is which register? Formal / Semi-Formal / Informal<button type="button" class="reveal-btn" data-type="reveal" data-target="qc4">Reveal</button><div class="qc-answer" id="qc4" hidden><strong style="color:#16A34A">Formal</strong> — <span style="color:#6B7280">"Dear Ms. [Surname]" = Formal register.</span></div></div>
+<div class="qc-item" data-n="5">Name ONE situation where you MUST use formal English in an email.<button type="button" class="reveal-btn" data-type="reveal" data-target="qc5">Reveal</button><div class="qc-answer" id="qc5" hidden><strong style="color:#16A34A">Open answer</strong> — <span style="color:#6B7280">e.g. first email to a new client, senior executive, or legal matter.</span></div></div>
+</div>
+</div></div>
+
+<!-- MODULE 2 -->
+<div class="mod" id="mod-02">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#1A3A7C,#2563EB)">
+<div class="mod-n">Module 02</div><div class="mod-t">Email Anatomy</div>
+<div class="mod-s">⏱ 20 min · 8 Components · Labels · Matching &amp; Ordering Tasks</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">Look at a recent email. How many separate parts can you identify?</div>
+<div class="wu-q">What do you think is the MOST important part of a business email? Why?</div>
+<div class="wu-q">Is the subject line part of the email body — or something different?</div>
+<div class="wu-foot">💬 Share with a partner, then with the class.</div></div>
+
+<div class="concept blue">
+<div class="con-top"><span class="con-icon">🔬</span><span class="con-lbl">CONCEPT · Email Structure</span></div>
+<div class="con-title">The 8-Part Email Architecture</div>
+<div class="con-body">Every professional email contains exactly <strong>8 key components</strong>. Understanding the function of each one gives you a reusable template for any situation. A <strong>missing component</strong> creates confusion; a <strong>poorly written one</strong> creates a negative impression.
+<ul class="con-list">
+<li>Each component has a specific <strong>function</strong> and <strong>position</strong></li>
+<li>Components must appear in the correct <strong>sequence</strong></li>
+<li>The opening line and CTA are the two most frequently written badly</li>
+</ul></div></div>
+
+<div class="parts">
+<div class="part"><div class="p-num" style="background:#2563EB">1</div><div class="p-body"><div class="p-name" style="color:#2563EB">SUBJECT LINE</div><div class="p-desc">Determines whether the email is opened. Must be specific, clear, under 50 characters, and action-oriented. Write it FIRST.</div><div class="p-ex">"Budget Approval Required — Project Alpha — Action by 31 Oct"</div></div></div>
+<div class="part"><div class="p-num" style="background:#1A3A7C">2</div><div class="p-body"><div class="p-name" style="color:#1A3A7C">SALUTATION / GREETING</div><div class="p-desc">Sets the tone immediately. Always verify the person's correct name, title, and preferred form of address.</div><div class="p-ex">"Dear Mr. Henderson," / "Hi Anna," / "Dear Sir or Madam,"</div></div></div>
+<div class="part"><div class="p-num" style="background:#0D9488">3</div><div class="p-body"><div class="p-name" style="color:#0D9488">OPENING LINE</div><div class="p-desc">States your reason for writing in sentence ONE. Never leave the reader guessing. Apply the BLOT method.</div><div class="p-ex">"I am writing to request an extension on the Q3 report submission."</div></div></div>
+<div class="part"><div class="p-num" style="background:#7C3AED">4</div><div class="p-body"><div class="p-name" style="color:#7C3AED">BODY — PARAGRAPH 1</div><div class="p-desc">Context or background. Maximum 2–3 sentences. One idea per paragraph only — never mix topics.</div><div class="p-ex">"As discussed last Tuesday, the project timeline has been affected by unforeseen circumstances."</div></div></div>
+<div class="part"><div class="p-num" style="background:#DB2777">5</div><div class="p-body"><div class="p-name" style="color:#DB2777">BODY — PARAGRAPH 2</div><div class="p-desc">Main message: the core request, information, or explanation. This is the most important paragraph.</div><div class="p-ex">"We would therefore like to request an extension of ten business days."</div></div></div>
+<div class="part"><div class="p-num" style="background:#D97706">6</div><div class="p-body"><div class="p-name" style="color:#D97706">CALL TO ACTION (CTA)</div><div class="p-desc">Tells the reader exactly WHAT to do, WHO must do it, and BY WHEN. One specific action per email.</div><div class="p-ex">"Could you please confirm your approval by Friday 3 November, 5pm?"</div></div></div>
+<div class="part"><div class="p-num" style="background:#0D9488">7</div><div class="p-body"><div class="p-name" style="color:#0D9488">CLOSING LINE</div><div class="p-desc">A polite sentence that offers further assistance, sets expectations, or expresses goodwill before the sign-off.</div><div class="p-ex">"Please do not hesitate to contact me should you require any further information."</div></div></div>
+<div class="part"><div class="p-num" style="background:#0D1B3E">8</div><div class="p-body"><div class="p-name" style="color:#0D1B3E">SIGN-OFF + SIGNATURE BLOCK</div><div class="p-desc">Farewell phrase + full name + job title + company + direct phone. Never just your first name alone.</div><div class="p-ex">"Kind regards, / James Park | Marketing Director | TechFlow UK | +44 20 7946 1234"</div></div></div>
+</div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#2563EB,#1D4ED8)">
+<div><div class="ex-n">Exercise 2A</div><div class="ex-type">Matching — Label Each Part (1–8)</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Read each email extract. Write the component NUMBER (1–8) in the blank.</div>
+<div class="ex-row"><span class="ex-lbl">___ "Best regards, / Maria Santos | Project Manager | GlobalTech"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Re: Invoice #4421 — Payment Due 30 November — Action Required"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "I am writing to confirm receipt of your order placed on 14 October."</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Could you please send the signed contract by Thursday 28th?"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Dear Mr. Chen,"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Thank you for your time. We look forward to hearing from you."</span></div>
+</div></div>
+
+<div class="exercise" style="margin-top:14px">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#2563EB,#1D4ED8)">
+<div><div class="ex-n">Exercise 2B</div><div class="ex-type">Put the Email Parts in Correct Order (1–6)</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">These 6 email parts are scrambled. Number them 1–6 in the correct sequence.</div>
+<div class="ex-row"><span class="ex-lbl">___ "Could you please confirm your attendance by Monday?"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Kind regards, / Tom Baker | Sales Director"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "I am writing to invite you to our annual product showcase."</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Re: Invitation — Annual Showcase — 5 December — London"</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "The event takes place on Friday 5 December at our London HQ."</span></div>
+<div class="ex-row"><span class="ex-lbl">___ "Dear Ms. Oliveira,"</span></div>
+</div></div>
+
+<div class="discuss teal">
+<div class="dis-title">💬 Discuss — Think &amp; Share</div>
+<div class="dis-q">Which component do most people write badly or skip? From your experience?</div>
+<div class="dis-q">Why is the opening line so critical? What happens when it is vague?</div>
+<div class="dis-q">A colleague says: "The sign-off is just a formality." Do you agree?</div>
+</div>
+</div></div>
+
+<!-- MODULE 3 -->
+<div class="mod" id="mod-03">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#0D9488,#0891B2)">
+<div class="mod-n">Module 03</div><div class="mod-t">Step-by-Step Writing Process</div>
+<div class="mod-s">⏱ 25 min · 7 Steps · BLOT · Subject Lines · Planning Grid</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">Before writing a business email, do you plan it? How?</div>
+<div class="wu-q">How long does it take you to write a professional email in English?</div>
+<div class="wu-q">What do you write first — the subject line or the body?</div>
+<div class="wu-foot">💬 Compare approaches with your group.</div></div>
+
+<div class="concept teal">
+<div class="con-top"><span class="con-icon">🔄</span><span class="con-lbl">CONCEPT · Writing as a Process</span></div>
+<div class="con-title">Why Writing Is a Process, Not a Single Action</div>
+<div class="con-body">Professional writers never just type and send. They <strong>plan → draft → revise → proofread → send</strong>. Even experienced writers follow a structured process because it produces clearer communication and avoids costly mistakes.</div></div>
+
+<div class="concept gold">
+<div class="con-top"><span class="con-icon">⚡</span><span class="con-lbl">CONCEPT · The BLOT Method</span></div>
+<div class="con-title">BLOT = Bottom Line On Top</div>
+<div class="con-body">In business writing, the most important information always comes <strong>first</strong>. Business readers are busy — they skim. If your key message is buried in paragraph 3, it may never be read.</div>
+<div class="con-grid">
+<div class="con-kv"><div class="kk">❌ Without BLOT</div><div class="kv">"I hope you are well. Following our meeting... [2 paragraphs]... I need the report by Friday."</div></div>
+<div class="con-kv"><div class="kk">✅ With BLOT</div><div class="kv">"I am writing to request the Q3 report by Friday 5pm. [context follows]"</div></div>
+</div></div>
+
+<div class="concept purple">
+<div class="con-top"><span class="con-icon">🏷</span><span class="con-lbl">CONCEPT · The Subject Line</span></div>
+<div class="con-title">Why Subject Lines Are the Most Important Line You Write</div>
+<div class="con-body">Research shows <strong>47% of recipients</strong> decide whether to open an email based solely on the subject line. A specific, well-crafted subject line gets your email opened, prioritised, and acted on.
+<ul class="con-list">
+<li><strong>Include:</strong> topic + context + date or action keyword</li>
+<li><strong>Maximum:</strong> ~50 characters for full display on mobile</li>
+<li><strong>Avoid:</strong> "Hi", "Update", "FYI", RE:RE:RE:, ALL CAPS, excessive !!!</li>
+<li><strong>Formula:</strong> [Topic] — [Context/Name] — [Date or Action]</li>
+</ul></div></div>
+
+<div class="steps">
+<div class="step"><div class="st-num" style="background:#0D9488">1</div><div class="st-body"><div class="st-name" style="color:#0D9488">DEFINE YOUR PURPOSE</div><div class="st-desc">Write your goal in one sentence BEFORE typing anything else. Ask: What should the reader DO or KNOW?</div><ul class="st-buls"><li>Am I informing, requesting, apologising, confirming, or complaining?</li><li>Who is my reader? What is their seniority and our relationship?</li></ul></div></div>
+<div class="step"><div class="st-num" style="background:#2563EB">2</div><div class="st-body"><div class="st-name" style="color:#2563EB">WRITE THE SUBJECT LINE FIRST</div><div class="st-desc">A strong subject line is written before the body — it keeps you focused.</div><ul class="st-buls"><li>❌ "Update" → ✅ "Q3 Report: Budget Revised — Action Required by 31 Oct"</li><li>Include: topic + context + date or required action</li></ul></div></div>
+<div class="step"><div class="st-num" style="background:#1A3A7C">3</div><div class="st-body"><div class="st-name" style="color:#1A3A7C">CHOOSE YOUR SALUTATION</div><div class="st-desc">Match formality to the recipient. Never assume gender from a first name alone.</div><ul class="st-buls"><li>"Dear Dr./Mr./Ms. [Surname]" — formal or senior contact</li><li>"Hi [First Name]" — established colleague or regular contact</li></ul></div></div>
+<div class="step"><div class="st-num" style="background:#7C3AED">4</div><div class="st-body"><div class="st-name" style="color:#7C3AED">WRITE YOUR OPENING LINE (BLOT)</div><div class="st-desc">State your purpose in sentence one. Delete anything that doesn't add direct value.</div><ul class="st-buls"><li>✅ "I am writing to request an extension for the Q3 submission."</li><li>❌ "I hope this email finds you well. How have you been?" — slow start!</li></ul></div></div>
+<div class="step"><div class="st-num" style="background:#D97706">5</div><div class="st-body"><div class="st-name" style="color:#D97706">BUILD THE BODY (ONE IDEA PER PARAGRAPH)</div><div class="st-desc">Para 1: Context. Para 2: Main message. Para 3: Supporting detail. 2–4 sentences each.</div><ul class="st-buls"><li>Use bullet points for 3+ listed items — never for 1 or 2 things</li><li>White space improves readability dramatically</li></ul></div></div>
+<div class="step"><div class="st-num" style="background:#DB2777">6</div><div class="st-body"><div class="st-name" style="color:#DB2777">ADD A SPECIFIC CALL TO ACTION</div><div class="st-desc">Tell the reader: WHO does WHAT by WHEN. Ask for ONE action per email.</div><ul class="st-buls"><li>✅ "Please review and sign the contract by Friday, 5pm."</li><li>❌ "Let me know what you think." — too vague, no deadline</li></ul></div></div>
+<div class="step"><div class="st-num" style="background:#0D1B3E">7</div><div class="st-body"><div class="st-name" style="color:#0D1B3E">PROOFREAD — E.M.A.I.L. CHECKLIST</div><div class="st-desc">E=Errors · M=Manner/Tone · A=Attachments · I=Identify recipients · L=Logic</div><ul class="st-buls"><li>Use spell-check AND read aloud — your ear catches what your eyes miss</li><li>For sensitive emails: write → wait 24h → reread → send</li></ul></div></div>
+</div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#0D9488,#0891B2)">
+<div><div class="ex-n">Exercise 3A</div><div class="ex-type">Subject Line Makeover — Rewrite 5 Weak Subject Lines</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Rewrite these weak subject lines. Make them specific, professional, and under 50 characters.</div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">❌ "Hi"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">❌ "Question about invoice"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">❌ "Regarding our meeting"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">❌ "Important!!!"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">❌ "FWD: FWD: RE: proposal"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+</div></div>
+
+<div class="pair">
+<div class="pair-h">👥 Pair Work — Email Planning Role Play</div>
+<div class="pair-b">
+<div class="p-side"><div class="p-role">🅐 Student A — The Client</div><div class="p-txt">You want to schedule a product demo with a new software company. Explain your availability, what product you need, and any requirements. Speak naturally — don't write yet!</div></div>
+<div class="p-side"><div class="p-role">🅑 Student B — The Sales Manager</div><div class="p-txt">Listen to Student A. Then fill in the Planning Grid: purpose, subject line, opening line, 2 body points, CTA, sign-off. Show it to Student A for feedback before writing the full email.</div></div>
+</div></div>
+
+<div class="qc"><div class="qc-title">⚡ Quick Check</div>
+<div class="qc-item" data-n="1">BLOT means: Bottom __________ On Top.<button type="button" class="reveal-btn" data-type="reveal" data-target="qc6">Reveal</button><div class="qc-answer" id="qc6" hidden><strong style="color:#16A34A">Line</strong> — <span style="color:#6B7280">BLOT = Bottom LINE On Top.</span></div></div>
+<div class="qc-item" data-n="2">True or False: You should write the subject line AFTER finishing the body.<button type="button" class="reveal-btn" data-type="reveal" data-target="qc7">Reveal</button><div class="qc-answer" id="qc7" hidden><strong style="color:#16A34A">False</strong> — <span style="color:#6B7280">Write the subject line FIRST — it keeps you focused.</span></div></div>
+<div class="qc-item" data-n="3">In E.M.A.I.L., what does the "A" stand for?<button type="button" class="reveal-btn" data-type="reveal" data-target="qc8">Reveal</button><div class="qc-answer" id="qc8" hidden><strong style="color:#16A34A">Attachments</strong> — <span style="color:#6B7280">E=Errors  M=Manner  A=Attachments  I=Identify  L=Logic</span></div></div>
+<div class="qc-item" data-n="4">A subject line should be under ______ characters for best results.<button type="button" class="reveal-btn" data-type="reveal" data-target="qc9">Reveal</button><div class="qc-answer" id="qc9" hidden><strong style="color:#16A34A">50 characters</strong> — <span style="color:#6B7280">Keep subject lines under ~50 chars for full mobile display.</span></div></div>
+<div class="qc-item" data-n="5">You should ask for ______ (one / multiple) action(s) per email.<button type="button" class="reveal-btn" data-type="reveal" data-target="qc10">Reveal</button><div class="qc-answer" id="qc10" hidden><strong style="color:#16A34A">one</strong> — <span style="color:#6B7280">Always ask for ONE specific action per email.</span></div></div>
+</div>
+</div></div>
+
+<!-- MODULE 4 -->
+<div class="mod" id="mod-04">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#92400E,#D97706)">
+<div class="mod-n">Module 04</div><div class="mod-t">Types of Business Emails</div>
+<div class="mod-s">⏱ 20 min · 8 Categories · Identification · Sentence Starters</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">What types of emails do you write most frequently at work or school?</div>
+<div class="wu-q">Which type of email is the hardest to write professionally — and why?</div>
+<div class="wu-q">Have you ever had to write an apology email in English? What was the challenge?</div>
+<div class="wu-foot">💬 Compare with a partner. Which type do you find most challenging?</div></div>
+
+<div class="concept gold">
+<div class="con-top"><span class="con-icon">📂</span><span class="con-lbl">CONCEPT · Email Categories</span></div>
+<div class="con-title">Why Identifying the Email Type Matters</div>
+<div class="con-body">Each type of email has its own <strong>purpose</strong>, <strong>tone expectations</strong>, <strong>structure</strong>, and <strong>vocabulary</strong>. Identifying the type <em>before</em> you write helps you choose the right opening, correct formality level, and appropriate call to action. Mixing types creates confusion and unprofessionalism.
+<ul class="con-list">
+<li>Request emails need <strong>polite, indirect language</strong></li>
+<li>Apology emails need the <strong>Acknowledge → Explain → Resolve → Reassure formula</strong></li>
+<li>Complaint emails need to be <strong>firm but never aggressive</strong></li>
+</ul></div></div>
+
+<div class="types">
+<div class="tc"><div class="tc-h" style="background:#1A3A7C"><span class="tc-icon">📋</span><span class="tc-name">REQUEST</span></div><div class="tc-b"><div class="tc-desc">Asking for information, approval, a meeting, a document, or a decision.</div><ul class="tc-starters"><li>"I am writing to request a copy of…"</li><li>"I would like to request your approval for…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#0D9488"><span class="tc-icon">✅</span><span class="tc-name">CONFIRMATION</span></div><div class="tc-b"><div class="tc-desc">Confirming a meeting, booking, order, agreement, or receipt of a document.</div><ul class="tc-starters"><li>"I am writing to confirm our meeting on…"</li><li>"As agreed, I am pleased to confirm…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#DC2626"><span class="tc-icon">😔</span><span class="tc-name">APOLOGY</span></div><div class="tc-b"><div class="tc-desc">Acknowledging an error. Formula: Acknowledge + Explain + Resolve + Reassure.</div><ul class="tc-starters"><li>"I am writing to sincerely apologise for…"</li><li>"I take full responsibility for the delay in…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#2563EB"><span class="tc-icon">📢</span><span class="tc-name">ANNOUNCEMENT</span></div><div class="tc-b"><div class="tc-desc">Sharing news: product launches, policy changes, events, updates.</div><ul class="tc-starters"><li>"I am pleased to announce that…"</li><li>"We would like to inform you of an important change…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#7C3AED"><span class="tc-icon">🤝</span><span class="tc-name">INTRODUCTION</span></div><div class="tc-b"><div class="tc-desc">Introducing yourself, a colleague, or a product to a new contact.</div><ul class="tc-starters"><li>"My name is [X] and I am the [role] at…"</li><li>"I was referred to you by [name]…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#D97706"><span class="tc-icon">📌</span><span class="tc-name">FOLLOW-UP</span></div><div class="tc-b"><div class="tc-desc">Checking in after a meeting, proposal, interview, or unanswered email.</div><ul class="tc-starters"><li>"I am following up on my email of [date]…"</li><li>"I wanted to check in after our meeting…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#DB2777"><span class="tc-icon">❌</span><span class="tc-name">COMPLAINT</span></div><div class="tc-b"><div class="tc-desc">Formally raising a concern. Firm but professional. Always propose a solution.</div><ul class="tc-starters"><li>"I am writing to formally raise a concern regarding…"</li><li>"I am disappointed to report that…"</li></ul></div></div>
+<div class="tc"><div class="tc-h" style="background:#16A34A"><span class="tc-icon">🙏</span><span class="tc-name">THANK-YOU</span></div><div class="tc-b"><div class="tc-desc">Expressing sincere gratitude after a meeting, interview, or collaboration.</div><ul class="tc-starters"><li>"I am writing to thank you for…"</li><li>"I wanted to express my sincere gratitude for…"</li></ul></div></div>
+</div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#D97706,#B45309)">
+<div><div class="ex-n">Exercise 4A</div><div class="ex-type">Identify the Email Type</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Read each extract. Write the email TYPE from the 8 categories above.</div>
+<div class="ex-row"><span class="ex-lbl">Subject: "Apology — Your Order #8821 Delayed — New Dispatch: 12 Nov"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">"I am writing to formally raise a concern about recurring billing errors."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">Subject: "Exciting News — Introducing Our New CEO, Dr. Lisa Park"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">"I am following up on the proposal I submitted last Tuesday, ref. #P-2024-109."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">"Thank you so much for the opportunity to interview with you yesterday."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+</div></div>
+
+<div class="discuss gold">
+<div class="dis-title">💬 Discuss</div>
+<div class="dis-q">Which email type requires the most careful tone management? Why?</div>
+<div class="dis-q">Can an email be more than one type at the same time? Give an example.</div>
+<div class="dis-q">When is a complaint email appropriate? What should you NEVER write in one?</div>
+</div>
+</div></div>
+
+<!-- MODULE 5 -->
+<div class="video-block">
+  <div class="video-header"><span class="v-icon">&#9654;</span><div>
+  <div class="v-label">Video &middot; Before Module 5</div>
+  <div class="v-title">Writing an Effective Business Email &mdash; LearnFree</div>
+  </div><span class="v-badge">&#9654; WATCH FIRST</span></div>
+  <div class="video-wrap"><iframe src="https://www.youtube.com/embed/amJZXjxnhTI"
+    title="Writing an Effective Business Email" allowfullscreen loading="lazy"
+    allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture">
+  </iframe></div>
+  <div class="video-footer">&#128204; Watch this video, then answer the quiz below before starting Module 5</div>
+</div>
+<div class="quiz-block" id="quiz2"><div class="quiz-hdr"><span style="font-size:20px">&#129504;</span><div><div class="q-lbl">Quiz · Video 2 — Writing an Effective Business Email</div><div class="q-title">Test your understanding — 5 questions, 4 alternatives each</div></div><div class="q-score-wrap"><div class="q-score" id="quiz2-sc">0/5</div><div class="q-slbl">SCORE</div></div></div><div class="quiz-body"><div class="quiz-prog"><div class="quiz-prog-fill" id="quiz2-pg"></div></div><div class="q-card  active" id="quiz2-q0"><div class="q-num">Question 1 of 5</div><div class="q-text">According to the video, what is the FIRST thing to consider before writing a business email?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="0" data-oi="0" data-correct="1"><span class="opt-letter">A</span><span class="opt-text">Choose the correct font size and formatting style</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="0" data-oi="1" data-correct="1"><span class="opt-letter">B</span><span class="opt-text">Define your purpose — what you want the reader to know or do</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="0" data-oi="2" data-correct="1"><span class="opt-letter">C</span><span class="opt-text">Write the signature block and sign-off first</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="0" data-oi="3" data-correct="1"><span class="opt-letter">D</span><span class="opt-text">Check whether the recipient is available before sending</span></button></div><div class="q-fb ok" id="quiz2-ok0" hidden>&#10003; Correct! The video emphasises defining your purpose as the essential first step — what should the reader know or do?</div><div class="q-fb no" id="quiz2-no0" hidden>&#10007; The video recommends starting by defining your purpose: what do you want the reader to know or do after reading?</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz2-nx0" hidden data-type="quiz-next" data-qid="quiz2" data-qi="0" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz2-q1"><div class="q-num">Question 2 of 5</div><div class="q-text">The video says a good business email should above all be:</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="1" data-oi="0" data-correct="2"><span class="opt-letter">A</span><span class="opt-text">Long and fully detailed so nothing is missed</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="1" data-oi="1" data-correct="2"><span class="opt-letter">B</span><span class="opt-text">Full of technical vocabulary to show professional expertise</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="1" data-oi="2" data-correct="2"><span class="opt-letter">C</span><span class="opt-text">Clear, concise, and easy to understand</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="1" data-oi="3" data-correct="2"><span class="opt-letter">D</span><span class="opt-text">Conversational and informal to build a friendly connection</span></button></div><div class="q-fb ok" id="quiz2-ok1" hidden>&#10003; Correct! The video consistently stresses that clarity and conciseness are the key qualities of effective business email.</div><div class="q-fb no" id="quiz2-no1" hidden>&#10007; The video teaches that clarity and conciseness — not length or vocabulary complexity — are the keys to effective email.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz2-nx1" hidden data-type="quiz-next" data-qid="quiz2" data-qi="1" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz2-q2"><div class="q-num">Question 3 of 5</div><div class="q-text">What does the video say about the TONE of a business email?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="2" data-oi="0" data-correct="2"><span class="opt-letter">A</span><span class="opt-text">Tone is irrelevant as long as the information is factually correct</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="2" data-oi="1" data-correct="2"><span class="opt-letter">B</span><span class="opt-text">Always use an extremely formal, legal-style tone regardless of context</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="2" data-oi="2" data-correct="2"><span class="opt-letter">C</span><span class="opt-text">The tone should match the relationship and context — professional but appropriate</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="2" data-oi="3" data-correct="2"><span class="opt-letter">D</span><span class="opt-text">An informal tone is always better because it feels more human and personal</span></button></div><div class="q-fb ok" id="quiz2-ok2" hidden>&#10003; Correct! The video explains that tone should be calibrated to the relationship and context of each specific email.</div><div class="q-fb no" id="quiz2-no2" hidden>&#10007; The video covers tone matching: the right level of formality depends on your relationship and context.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz2-nx2" hidden data-type="quiz-next" data-qid="quiz2" data-qi="2" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz2-q3"><div class="q-num">Question 4 of 5</div><div class="q-text">What important step does the video recommend AFTER you have written your email?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="3" data-oi="0" data-correct="1"><span class="opt-letter">A</span><span class="opt-text">Forward it to a colleague for a second opinion before sending</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="3" data-oi="1" data-correct="1"><span class="opt-letter">B</span><span class="opt-text">Reread and revise it carefully before pressing send</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="3" data-oi="2" data-correct="1"><span class="opt-letter">C</span><span class="opt-text">Add as many recipients as possible to maximise visibility</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="3" data-oi="3" data-correct="1"><span class="opt-letter">D</span><span class="opt-text">Delete the draft and rewrite it completely from scratch</span></button></div><div class="q-fb ok" id="quiz2-ok3" hidden>&#10003; Correct! The video explicitly identifies reviewing and revising as a crucial step before you send any email.</div><div class="q-fb no" id="quiz2-no3" hidden>&#10007; The video includes rereading and revising as a key part of the writing process — always do this before sending.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz2-nx3" hidden data-type="quiz-next" data-qid="quiz2" data-qi="3" data-total="5">Next &#8594;</button></div></div><div class="q-card" id="quiz2-q4"><div class="q-num">Question 5 of 5</div><div class="q-text">Which email structure does the video recommend?</div><div class="q-opts"><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="4" data-oi="0" data-correct="1"><span class="opt-letter">A</span><span class="opt-text">One long single paragraph covering all topics to save the reader's time</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="4" data-oi="1" data-correct="1"><span class="opt-letter">B</span><span class="opt-text">A clear subject line, a brief organised body, and a professional closing</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="4" data-oi="2" data-correct="1"><span class="opt-letter">C</span><span class="opt-text">A long introduction, numbered bullet points, with no sign-off needed</span></button><button type="button" class="q-opt" data-type="quiz-opt" data-qid="quiz2" data-qi="4" data-oi="3" data-correct="1"><span class="opt-letter">D</span><span class="opt-text">Any structure is fine as long as the overall tone is polite</span></button></div><div class="q-fb ok" id="quiz2-ok4" hidden>&#10003; Correct! The video recommends a clear subject line, well-organised body paragraphs, and a professional closing.</div><div class="q-fb no" id="quiz2-no4" hidden>&#10007; The video advocates for a specific structure: clear subject, organised body paragraphs, and a professional closing.</div><div class="q-nav-row"><button type="button" class="q-next-btn" id="quiz2-nx4" hidden data-type="quiz-next" data-qid="quiz2" data-qi="4" data-total="5">See my score &#8594;</button></div></div><div class="q-result" id="quiz2-res" hidden><div class="score-circle" id="quiz2-circ">?</div><div class="score-msg" id="quiz2-msg"></div><div class="score-sub" id="quiz2-sub"></div><button type="button" class="q-retry" data-type="quiz-retry" data-qid="quiz2" data-total="5">&#8635; Try Again</button></div></div></div>
+<div class="mod" id="mod-05">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#5B21B6,#7C3AED)">
+<div class="mod-n">Module 05</div><div class="mod-t">Vocabulary &amp; Phrases Bank</div>
+<div class="mod-s">⏱ 25 min · Openings · Requests · Closings · Sign-offs · Practice</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">What English phrases do you already use in professional emails? Share one with the class.</div>
+<div class="wu-q">What's the difference between "I want the report" and "Could you please send the report"?</div>
+<div class="wu-q">Do you ever translate word-for-word from your first language? What problems can that cause?</div>
+<div class="wu-foot">💬 Discuss. Then share one example of "bad translation" with the class.</div></div>
+
+<div class="concept purple">
+<div class="con-top"><span class="con-icon">📖</span><span class="con-lbl">CONCEPT · Fixed Expressions in Business English</span></div>
+<div class="con-title">Why Professional Email Has Its Own Language</div>
+<div class="con-body">Business email English uses many <strong>fixed expressions</strong> — phrases that native speakers use repeatedly because they are efficient, appropriately polite, and universally understood. Learning these phrases gives you a <strong>ready-made toolkit</strong> for any professional situation without having to invent language from scratch.
+<ul class="con-list">
+<li>They signal that you understand business communication conventions</li>
+<li>They are culturally neutral and professionally safe across cultures</li>
+<li>They save time and reduce the risk of accidentally sounding rude</li>
+</ul></div></div>
+
+<div class="concept teal">
+<div class="con-top"><span class="con-icon">📏</span><span class="con-lbl">CONCEPT · The Politeness Scale</span></div>
+<div class="con-title">Making Requests — From Too Direct to Too Passive</div>
+<div class="con-body">In English, there is a spectrum of politeness when making requests. <strong>Too direct</strong> sounds rude; <strong>too passive</strong> sounds weak and unprofessional. Your target is the <strong>polite, clear professional zone</strong>.</div></div>
+
+<table class="gtable" style="margin-top:10px">
+<tr><th>Phrase</th><th>Level</th><th>When to Use</th></tr>
+<tr><td>"Send me the file."</td><td style="color:var(--coral);font-weight:700">❌ Too Direct</td><td>Almost never in professional email</td></tr>
+<tr><td>"Please send the file."</td><td style="color:var(--gold);font-weight:700">⚠️ Direct but OK</td><td>Quick internal messages only</td></tr>
+<tr><td>"Could you please send me the file?"</td><td style="color:var(--olive);font-weight:700">✅ Polite Standard</td><td>Most everyday business emails</td></tr>
+<tr><td>"I would appreciate it if you could send…"</td><td style="color:var(--teal);font-weight:700">✅✅ Very Polite</td><td>Formal or senior contact</td></tr>
+<tr><td>"Would it be possible for you to send…"</td><td style="color:var(--blue);font-weight:700">✅✅✅ Most Tentative</td><td>Sensitive requests, first contact</td></tr>
+</table>
+
+<p style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--purple);margin:18px 0 9px">A · Opening Phrases</p>
+<table class="gtable" style="--head:var(--purple)">
+<tr><th style="background:var(--purple)">Purpose</th><th style="background:var(--purple)">Phrase</th><th style="background:var(--purple)">Register</th></tr>
+<tr><td>First contact</td><td>I am writing to introduce myself and our company…</td><td><span class="tag f">Formal</span></td></tr>
+<tr><td>Replying</td><td>Thank you for your email of [date] regarding…</td><td><span class="tag f">Formal</span></td></tr>
+<tr><td>Following up</td><td>I am writing to follow up on my previous email of…</td><td><span class="tag f">Formal</span></td></tr>
+<tr><td>Good news</td><td>I am pleased / delighted to inform you that…</td><td><span class="tag sf">Semi-Formal</span></td></tr>
+<tr><td>Bad news</td><td>I regret to inform you that… / Unfortunately…</td><td><span class="tag sf">Semi-Formal</span></td></tr>
+<tr><td>Casual reply</td><td>Thanks for getting back to me about…</td><td><span class="tag inf">Informal</span></td></tr>
+</table>
+
+<p style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--purple);margin:16px 0 9px">B · Closing Phrases</p>
+<table class="gtable">
+<tr><th style="background:var(--purple)">Phrase</th><th style="background:var(--purple)">Use Case</th></tr>
+<tr><td>I look forward to hearing from you.</td><td>Universal — most business emails</td></tr>
+<tr><td>Please do not hesitate to contact me if you have any questions.</td><td>After providing information</td></tr>
+<tr><td>I would appreciate a response at your earliest convenience.</td><td>Gentle urgency needed</td></tr>
+<tr><td>Thank you for your time and consideration.</td><td>After submitting a proposal</td></tr>
+<tr><td>Should you require any further information, please let me know.</td><td>After providing data or files</td></tr>
+</table>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">
+<div><div class="ex-n">Exercise 5A</div><div class="ex-type">Rephrase — Make It More Formal &amp; Professional</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Rewrite each informal phrase to sound professional and polite.</div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">"Send me the files ASAP."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">"I want to know when it's ready."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">"Sorry about that, won't happen again."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">"When are you free to chat?"</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl" style="color:var(--coral)">"Got your email, will check later."</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+</div></div>
+
+<div class="qc"><div class="qc-title">⚡ Quick Check</div>
+<div class="qc-item" data-n="1">"Yours faithfully," is used when you begin with "Dear ________ or Madam."<button type="button" class="reveal-btn" data-type="reveal" data-target="qc11">Reveal</button><div class="qc-answer" id="qc11" hidden><strong style="color:#16A34A">Sir</strong> — <span style="color:#6B7280">"Dear Sir or Madam" -> Yours faithfully | "Dear Mr. X" -> Yours sincerely</span></div></div>
+<div class="qc-item" data-n="2">True or False: "Best regards," can be used in formal and semi-formal emails.<button type="button" class="reveal-btn" data-type="reveal" data-target="qc12">Reveal</button><div class="qc-answer" id="qc12" hidden><strong style="color:#16A34A">True</strong> — <span style="color:#6B7280">"Best regards," works for both formal and semi-formal emails.</span></div></div>
+<div class="qc-item" data-n="3">Order from most to least formal: "Could you please…" / "Send me…" / "I would be grateful if…"<button type="button" class="reveal-btn" data-type="reveal" data-target="qc13">Reveal</button><div class="qc-answer" id="qc13" hidden><strong style="color:#16A34A">"I would be grateful" > "Could you please" > "Send me"</strong> — <span style="color:#6B7280">Most tentative to most direct.</span></div></div>
+<div class="qc-item" data-n="4">"I look forward to ________ (hear / hearing) from you." — which is correct?<button type="button" class="reveal-btn" data-type="reveal" data-target="qc14">Reveal</button><div class="qc-answer" id="qc14" hidden><strong style="color:#16A34A">hearing</strong> — <span style="color:#6B7280">"look forward to" always takes a gerund: look forward to HEARING.</span></div></div>
+</div>
+</div></div>
+
+<!-- MODULE 6 -->
+<div class="mod" id="mod-06">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#991B1B,#DC2626)">
+<div class="mod-n">Module 06</div><div class="mod-t">Common Mistakes &amp; How to Fix Them</div>
+<div class="mod-s">⏱ 20 min · 8 Critical Errors · Error Correction · Rewriting</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">What is the worst email mistake you have personally made or witnessed?</div>
+<div class="wu-q">Have you ever sent an email to the wrong person? What happened?</div>
+<div class="wu-q">Can a grammar mistake in a business email affect your career? How?</div>
+<div class="wu-foot">💬 Share with your group. Which mistake is the most damaging professionally?</div></div>
+
+<div class="concept coral">
+<div class="con-top"><span class="con-icon">⚠️</span><span class="con-lbl">CONCEPT · The Real Cost of Email Mistakes</span></div>
+<div class="con-title">Why Mistakes in Professional Emails Are Never "Just Small Errors"</div>
+<div class="con-body">A poorly written email can <strong>lose a client, damage a relationship, create legal problems, or end a career</strong>. In a study by Grammarly, 72% of business leaders said writing quality significantly impacts their perception of an employee's professionalism. Every email you send is a professional statement about you and your organisation.
+<ul class="con-list">
+<li>Emails are <strong>permanent</strong> — they can be screenshotted, forwarded, and used as evidence</li>
+<li>In global business, poor English signals <strong>lack of care</strong>, not just language difficulty</li>
+<li>The 8 mistakes below are the most common and most damaging in professional communication</li>
+</ul></div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 1 — Vague Subject Line</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>"Hi" / "Update" / "Question" / "FYI" / "URGENT!!!"</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>"Project Alpha — Revised Budget — Approval Required by 31 Oct"</div></div><div class="mist-tip">💡 Vague subjects = #1 reason emails go unopened. Formula: Topic + Context + Date or Action.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 2 — Wrong Register / Tone</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>"Hey!! Can u send me the doc ASAP?? Thx!!!"</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>"Dear James, Could you please send the document at your earliest convenience?"</div></div><div class="mist-tip">💡 Match formality to the relationship. Slang, abbreviations, and !!! are unprofessional.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 3 — No Clear Purpose or Call to Action</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>"Just checking in. Let me know what you think." (About what? By when?)</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>"I am writing to request your feedback on the attached proposal by Friday 5pm."</div></div><div class="mist-tip">💡 Every email needs ONE clear purpose and ONE specific action. State it in sentence one.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 4 — Wall of Text</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>One massive paragraph covering 5 topics with no breaks or structure.</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>One paragraph = one idea. Use bullet points for 3+ items. White space = readability.</div></div><div class="mist-tip">💡 Business readers skim. If they can't find your point in 10 seconds, they move on.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 5 — Missing or Misnamed Attachments</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>"Please see the attached report for details." [No attachment sent]</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>Attach the file FIRST. Name it: "ProjectX_Report_Nov2024.pdf" not "final_v3.docx"</div></div><div class="mist-tip">💡 Pro tip: attaching the file is Step Zero — do it before writing a single word.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 6 — Emotional or Aggressive Language</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>"I'm really frustrated that this keeps happening. It's completely unacceptable!"</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>"I am concerned that this issue has recurred. Could we discuss a long-term solution?"</div></div><div class="mist-tip">💡 24-hour rule: write when angry, wait 24h, reread, THEN decide whether to send.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 7 — Reply All Misuse</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>Replying "Thanks!" to a company-wide email with 200+ people in the CC field.</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>Always ask: does EVERYONE on this thread need this reply? If no — click Reply only.</div></div><div class="mist-tip">💡 Reply All misuse is one of the fastest ways to damage your professional reputation.</div></div>
+
+<div class="mistake"><div class="mist-lbl">MISTAKE 8 — Grammar &amp; Spelling Errors</div><div class="mist-cols"><div class="mist-bad"><div class="mist-col-lbl bad">❌ Common Mistake</div>"Thank you for you're time. I look foward to meet you."</div><div class="mist-good"><div class="mist-col-lbl good">✅ Better Version</div>"Thank you for your time. I look forward to meeting you."</div></div><div class="mist-tip">💡 Use spell-check AND read aloud — your ear catches what your eyes miss.</div></div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#DC2626,#B91C1C)">
+<div><div class="ex-n">Exercise 6A</div><div class="ex-type">Spot the 10 Errors — Find &amp; Correct All Mistakes</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Find and correct all 10 mistakes (grammar, register, vocabulary) in this email.</div>
+<div class="email">
+<div class="e-top" style="background:#DC2626">❌ Problem Email — Identify and Correct All Errors</div>
+<div class="e-fields"><div class="e-field"><span class="e-lbl">Subject:</span><span class="e-val subj">hey</span></div></div>
+<div class="e-body"><p>Dear Mr smith,</p><p>I am write to you about the project what we discuss last week. We has finished the first part and think its going really good. Unfortunatelly we need more time to finishing the second part. Can you extend the deadline of two weeks? I know its a lot but we are working very hardly.</p><p>Let me know. Cheers<br>Bob</p></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px;font-size:13px;color:var(--gm)">
+<div>1. _________________________________</div><div>2. _________________________________</div>
+<div>3. _________________________________</div><div>4. _________________________________</div>
+<div>5. _________________________________</div><div>6. _________________________________</div>
+<div>7. _________________________________</div><div>8. _________________________________</div>
+<div>9. _________________________________</div><div>10. ________________________________</div>
+</div></div></div>
+
+<div class="discuss coral">
+<div class="dis-title">💬 Discuss</div>
+<div class="dis-q">Which of the 8 mistakes do YOU make most often? Be honest with your partner.</div>
+<div class="dis-q">How should you respond if you receive a rude or emotional email from a client?</div>
+<div class="dis-q">Can you think of a situation where "Reply All" is actually the RIGHT choice?</div>
+</div>
+</div></div>
+
+<!-- MODULE 7 -->
+<div class="mod" id="mod-07">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#1A3A7C,#2563EB)">
+<div class="mod-n">Module 07</div><div class="mod-t">Best Practices &amp; Professional Standards</div>
+<div class="mod-s">⏱ 15 min · Golden Rules · Tone Ladder · Pre-Send Checklist · Pair Activity</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">What does "professional tone" mean to you in an email? Give 3 adjectives.</div>
+<div class="wu-q">Is it possible to be TOO polite in a business email? Give an example.</div>
+<div class="wu-q">How do you manage urgency without sounding rude or demanding?</div>
+<div class="wu-foot">💬 Share with the class. Discuss the balance between polite and assertive.</div></div>
+
+<div class="concept navy">
+<div class="con-top"><span class="con-icon">⚖️</span><span class="con-lbl">CONCEPT · Professional Tone in Email</span></div>
+<div class="con-title">Why Tone Is So Easy to Get Wrong in Writing</div>
+<div class="con-body">In face-to-face communication, 55% of meaning comes from body language and 38% from voice tone. In email, <strong>100% of your meaning comes from words alone</strong>. This makes tone extremely easy to misread. The same message can sound polite, neutral, or aggressive depending on word choice alone.
+<ul class="con-list">
+<li>Read every email as if you ARE the recipient — would you feel respected?</li>
+<li>Avoid passive-aggressive phrases: "As I mentioned before…" / "As you should know…"</li>
+<li>Negative emotions + email = danger. Write → wait → reread → send</li>
+</ul></div></div>
+
+<div class="compare">
+<div style="border-radius:9px;overflow:hidden">
+<div class="cmp-h do">✅ DO THIS — Best Practices</div>
+<div class="cmp-b do">
+<div class="cmp-item">Respond within 24 hours — or send an acknowledgement</div>
+<div class="cmp-item">One email = one clear topic or request</div>
+<div class="cmp-item">Name attachments: "ProjectX_Report_Nov2024.pdf"</div>
+<div class="cmp-item">Use Bcc for large lists (protect privacy)</div>
+<div class="cmp-item">Wait 24h before sending emotional emails</div>
+<div class="cmp-item">Include a full signature block in every email</div>
+<div class="cmp-item">Ask for ONE specific action with a clear deadline</div>
+</div></div>
+<div style="border-radius:9px;overflow:hidden">
+<div class="cmp-h dont">❌ AVOID THIS</div>
+<div class="cmp-b dont">
+<div class="cmp-item">"Just checking in" with no clear purpose</div>
+<div class="cmp-item">Walls of text without paragraph breaks</div>
+<div class="cmp-item">Files named "final_FINAL_v3_use_this_one.docx"</div>
+<div class="cmp-item">Reply All to large groups unnecessarily</div>
+<div class="cmp-item">Sending angry emails in the heat of the moment</div>
+<div class="cmp-item">Signing off as just "Thanks" on formal first emails</div>
+<div class="cmp-item">Asking for 5 different things in one email</div>
+</div></div></div>
+
+<p style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--blue);margin:18px 0 9px">✅ Pre-Send Checklist — 10 Points</p>
+<div class="cl">
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Subject line is specific, clear, and under 50 characters</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Salutation matches the required level of formality</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Opening line states the purpose immediately (BLOT)</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Body is structured: one idea per paragraph</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Bullet points used for 3+ items only</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Call to action is specific: WHAT + WHO + BY WHEN</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Tone is professional — would you be comfortable if your boss saw this?</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Spelling and grammar have been proofread</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>All mentioned attachments are included and named correctly</span></div>
+<div class="cl-item"><input type="checkbox" class="cl-box"><span>Sending to the correct people — Reply vs Reply All?</span></div>
+</div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#1A3A7C,#2563EB)">
+<div><div class="ex-n">Exercise 7A</div><div class="ex-type">Tone Rewriter — Achieve the Target Tone</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Rewrite each sentence to achieve the tone described in brackets.</div>
+<div class="ex-row" style="flex-direction:column;gap:6px">
+<span style="color:var(--coral)">"Give me the updated budget NOW." → [polite &amp; urgent]</span>
+<span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+<div class="ex-row" style="flex-direction:column;gap:6px;margin-top:8px">
+<span style="color:var(--coral)">"Why is nobody answering my emails??" → [professional follow-up]</span>
+<span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+<div class="ex-row" style="flex-direction:column;gap:6px;margin-top:8px">
+<span style="color:var(--coral)">"Attached is stuff about the project." → [formal &amp; specific]</span>
+<span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+</div></div>
+</div></div>
+
+<!-- MODULE 8 -->
+<div class="mod" id="mod-08">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#0C4A6E,#0369A1)">
+<div class="mod-n">Module 08</div><div class="mod-t">Email Examples Gallery</div>
+<div class="mod-s">⏱ 25 min · 4 Annotated Models · Analysis Tasks · Role Plays</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">What makes you decide an email is "professional" within the first 5 seconds of reading?</div>
+<div class="wu-q">Predict: what makes a formal request email different from a follow-up email?</div>
+<div class="wu-foot">💬 Share predictions, then read the examples and verify.</div></div>
+
+<div class="concept blue">
+<div class="con-top"><span class="con-icon">🔍</span><span class="con-lbl">CONCEPT · Analysing Model Emails</span></div>
+<div class="con-title">How to Learn from Professional Email Examples</div>
+<div class="con-body">Reading and analysing model emails is one of the fastest ways to improve your own writing. As you read each example, actively look for: the <strong>email type</strong>, the <strong>register</strong>, the <strong>opening line structure</strong> (BLOT), the <strong>call to action</strong>, the <strong>closing phrase</strong>, and any <strong>vocabulary</strong> you want to use in your own emails.</div></div>
+
+<p style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:700;color:var(--blue);margin:16px 0 9px">📧 Example 1 — Formal Request Email</p>
+<div class="email">
+<div class="e-top" style="background:#1A3A7C">✉ Formal Request — Deadline Extension</div>
+<div class="e-fields">
+<div class="e-field"><span class="e-lbl">To:</span><span class="e-val">j.henderson@globalcorp.com</span></div>
+<div class="e-field"><span class="e-lbl">Cc:</span><span class="e-val">m.patel@globalcorp.com</span></div>
+<div class="e-field"><span class="e-lbl">Subject:</span><span class="e-val subj">Request for Extension — Q3 Financial Report — New Deadline: 20 October</span></div>
+</div>
+<div class="e-body">
+<p>Dear Mr. Henderson,</p>
+<p>I am writing to request a five-day extension for the submission of the Q3 Financial Report, originally due on 15 October 2024.</p>
+<p>Due to unforeseen delays in receiving data from our regional offices, our team requires additional time to ensure the accuracy and completeness of the report.</p>
+<p>We anticipate delivering the finalised document no later than 20 October. I sincerely apologise for any inconvenience and greatly appreciate your understanding.</p>
+<p>Please do not hesitate to contact me should you require any further information.</p>
+<p class="e-sig">Yours sincerely,<br><strong>Sarah Mitchell</strong> | Financial Analyst | Apex Solutions Ltd | +44 20 7946 0958</p>
+</div></div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#1A3A7C,#2563EB)">
+<div><div class="ex-n">Exercise 8A</div><div class="ex-type">Analyse Example 1</div></div></div>
+<div class="ex-body">
+<div class="ex-row"><span class="ex-lbl">1. What TYPE of email is this?</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">2. Register? Formal / Semi-Formal / Informal</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">3. Does the opening line follow BLOT?</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">4. What is the specific call to action?</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+<div class="ex-row"><span class="ex-lbl">5. Name ONE polite phrase from this email.</span><span class="ex-in" contenteditable="true" spellcheck="false"></span></div>
+</div></div>
+
+<p style="font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:700;color:var(--teal);margin:20px 0 9px">📧 Example 2 — Apology Email</p>
+<div class="email">
+<div class="e-top" style="background:#0D9488">✉ Apology Email — Late Delivery</div>
+<div class="e-fields">
+<div class="e-field"><span class="e-lbl">To:</span><span class="e-val">c.taylor@northstarlegal.com</span></div>
+<div class="e-field"><span class="e-lbl">Subject:</span><span class="e-val subj">Formal Apology — Delayed Contract Documents — Case #CF-2024-091</span></div>
+</div>
+<div class="e-body">
+<p>Dear Ms. Taylor,</p>
+<p>I am writing to sincerely apologise for the delay in delivering the signed contract documents, which were due on 10 November 2024.</p>
+<p>The delay was caused by an internal review process that took longer than anticipated. I take full responsibility for this oversight and the inconvenience it has caused your team.</p>
+<p>I am pleased to confirm that the documents have now been signed and will be couriered to your office today for delivery by 9:00 AM tomorrow, 13 November.</p>
+<p>We value your partnership greatly and I assure you this will not happen again.</p>
+<p class="e-sig">Yours sincerely,<br><strong>David Osei</strong> | Operations Manager | Meridian Consulting | +44 20 8123 4567</p>
+</div></div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#0D9488,#0891B2)">
+<div><div class="ex-n">Exercise 8B</div><div class="ex-type">Identify the Apology Formula (Acknowledge → Explain → Resolve → Reassure)</div></div></div>
+<div class="ex-body">
+<div class="ex-row" style="flex-direction:column;gap:5px"><span style="font-weight:600">Acknowledge (quote sentence):</span><span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+<div class="ex-row" style="flex-direction:column;gap:5px;margin-top:8px"><span style="font-weight:600">Explain:</span><span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+<div class="ex-row" style="flex-direction:column;gap:5px;margin-top:8px"><span style="font-weight:600">Resolve:</span><span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+<div class="ex-row" style="flex-direction:column;gap:5px;margin-top:8px"><span style="font-weight:600">Reassure:</span><span class="ex-in" contenteditable="true" spellcheck="false" style="min-width:100%"></span></div>
+</div></div>
+
+<div class="pair">
+<div class="pair-h">👥 Pair Work — Write the Follow-Up Reply</div>
+<div class="pair-b">
+<div class="p-side"><div class="p-role">🅐 Student A — Ms. Taylor (Client)</div><div class="p-txt">Read David's apology email. Write a professional reply: acknowledge the apology, accept or question the timeline, state your expectations clearly. 60–80 words. Use correct register.</div></div>
+<div class="p-side"><div class="p-role">🅑 Student B — David Osei (Manager)</div><div class="p-txt">After sending the apology, your director wants a 3-sentence internal summary of the situation. Write it using semi-formal register. Include: what happened, what action was taken, what the client was told.</div></div>
+</div></div>
+</div></div>
+
+<!-- MODULE 9 -->
+<div class="mod" id="mod-09">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#0F766E,#0D9488)">
+<div class="mod-n">Module 09</div><div class="mod-t">Case Studies</div>
+<div class="mod-s">⏱ 15 min · Problem Analysis · Group Discussion · Rewriting</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">Have you ever received an email that made you feel disrespected or confused? What was wrong?</div>
+<div class="wu-q">If a client sends you an aggressive email, what is the correct first step?</div>
+<div class="wu-foot">💬 Discuss. What should you NEVER do immediately after receiving a difficult email?</div></div>
+
+<div class="concept teal">
+<div class="con-top"><span class="con-icon">🎓</span><span class="con-lbl">CONCEPT · Learning from Communication Failures</span></div>
+<div class="con-title">Why Case Studies Are Powerful Learning Tools</div>
+<div class="con-body">Case studies allow us to analyse <strong>real communication failures</strong> in a safe environment. By identifying what went wrong and why, we develop a sharper critical eye we can then apply to our own writing. The two cases below are based on composite real-world situations encountered in professional communication.</div></div>
+
+<p style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--coral);margin:18px 0 8px">📋 Case 1 — The Email That Lost a Client</p>
+<p style="font-size:13px;color:var(--gd);margin-bottom:11px">A sales manager sent this email to a client who had requested a product demo. The client never responded. Read and analyse it carefully.</p>
+<div class="email">
+<div class="e-top" style="background:#DC2626">❌ PROBLEMATIC EMAIL — Identify All Problems</div>
+<div class="e-fields"><div class="e-field"><span class="e-lbl">Subject:</span><span class="e-val subj">our product</span></div></div>
+<div class="e-body">
+<p>Hi,</p>
+<p>I saw u requested a demo. We have a great product that does loads of stuff and its really popular everywhere. we think u will like it a lot.</p>
+<p>Let me know when ur free. Also attached is some info but its a big file lol</p>
+<p>Thanks<br>Mike</p>
+</div></div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#DC2626,#B91C1C)">
+<div><div class="ex-n">Exercise 9A</div><div class="ex-type">Find at Least 8 Problems</div></div></div>
+<div class="ex-body">
+<div class="ex-inst">Identify specific problems. Consider: subject, greeting, content, vocabulary, register, tone, CTA, signature.</div>
+<div style="display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--gm)">
+<div>1. _________________________________________________________________</div>
+<div>2. _________________________________________________________________</div>
+<div>3. _________________________________________________________________</div>
+<div>4. _________________________________________________________________</div>
+<div>5. _________________________________________________________________</div>
+<div>6. _________________________________________________________________</div>
+<div>7. _________________________________________________________________</div>
+<div>8. _________________________________________________________________</div>
+</div></div></div>
+
+<div class="exercise" style="margin-top:14px">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#0D9488,#0891B2)">
+<div><div class="ex-n">Exercise 9B</div><div class="ex-type">Rewrite Case 1 Email — Make It Professional (80–100 words)</div></div></div>
+<div class="ex-body">
+<div style="display:grid;grid-template-columns:110px 1fr;gap:6px;font-size:13px">
+<span style="font-weight:700;color:var(--teal);padding:7px 0">Subject:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--teal);padding:7px 0">Greeting:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--teal);padding:7px 0">Opening:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--teal);padding:7px 0">Body:</span><span style="border-bottom:1px solid var(--gb);padding:44px 0"></span>
+<span style="font-weight:700;color:var(--teal);padding:7px 0">CTA:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--teal);padding:7px 0">Sign-off:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+</div></div></div>
+
+<p style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--coral);margin:22px 0 8px">📋 Case 2 — The Tone Disaster</p>
+<div class="email">
+<div class="e-top" style="background:#DC2626">❌ TONE DISASTER — Discuss &amp; Rewrite</div>
+<div class="e-fields">
+<div class="e-field"><span class="e-lbl">To:</span><span class="e-val">r.williams@clientcorp.com</span></div>
+<div class="e-field"><span class="e-lbl">Subject:</span><span class="e-val subj">budget</span></div>
+</div>
+<div class="e-body">
+<p>Rachel,</p>
+<p>Look, we went over budget because YOUR requirements kept changing all the time. That is NOT our fault. We told you this would happen.</p>
+<p>The extra cost is $15,000 and you need to pay it. If you have a problem with that then you should have thought about it before changing everything every week.</p>
+<p>James</p>
+</div></div>
+
+<div class="discuss coral" style="margin-top:14px">
+<div class="dis-title">💬 Group Discussion — Case 2</div>
+<div class="dis-q">Identify 5 specific things that make this email aggressive or unprofessional.</div>
+<div class="dis-q">How should bad financial news be delivered professionally to a client?</div>
+<div class="dis-q">Rewrite this email using: Acknowledge → Explain → Propose Solution → Close Politely.</div>
+<div class="dis-q">Role play: one student is Rachel, one is James. Have the conversation professionally by phone instead.</div>
+</div>
+</div></div>
+
+<!-- MODULE 10 -->
+<div class="mod" id="mod-10">
+<div class="mod-hdr" style="background:linear-gradient(135deg,#4C1D95,#7C3AED)">
+<div class="mod-n">Module 10</div><div class="mod-t">Final Practice — Putting It All Together</div>
+<div class="mod-s">⏱ 40 min · Full Writing Tasks · Peer Review · Reflection</div></div>
+<div class="mod-body">
+
+<div class="warmup"><div class="wu-top"><span>🔥</span><span class="wu-title">Warm Up</span></div>
+<div class="wu-q">What is the ONE thing you learned today that you will use immediately?</div>
+<div class="wu-q">What part of writing professional emails in English still feels challenging?</div>
+<div class="wu-q">How will you practise email writing after this class?</div>
+<div class="wu-foot">💬 Share with the class. Let's set personal goals together!</div></div>
+
+<div class="concept purple">
+<div class="con-top"><span class="con-icon">🏁</span><span class="con-lbl">CONCEPT · Integration — The Complete System</span></div>
+<div class="con-title">Putting Every Skill Together</div>
+<div class="con-body">Professional email writing is not one skill — it is the combination of <strong>structural knowledge</strong>, <strong>vocabulary range</strong>, <strong>tone awareness</strong>, <strong>audience awareness</strong>, and <strong>editing discipline</strong>. The final exercises require you to use all of these simultaneously, exactly as you will in real professional situations.
+<div class="con-grid" style="margin-top:10px">
+<div class="con-kv"><div class="kk">Structure</div><div class="kv">8 parts · BLOT · one idea per paragraph</div></div>
+<div class="con-kv"><div class="kk">Vocabulary</div><div class="kv">Fixed phrases · politeness scale · sign-offs</div></div>
+<div class="con-kv"><div class="kk">Tone</div><div class="kv">Register + audience + emotional control</div></div>
+<div class="con-kv"><div class="kk">Process</div><div class="kv">7 steps · E.M.A.I.L. checklist · 24h rule</div></div>
+</div></div></div>
+
+<div class="concept navy">
+<div class="con-top"><span class="con-icon">📋</span><span class="con-lbl">SITUATION — Read Before Writing</span></div>
+<div class="con-title">Writing Task 1 — The Apology &amp; Recovery Email</div>
+<div class="con-body">
+You are <strong>Laura Navarro</strong>, Project Manager at <strong>Horizon Digital Ltd</strong>.<br>
+Your client is <strong>Sandra Lee</strong>, Operations Director at <strong>GlobalRetail Inc</strong>.<br><br>
+The website redesign project is <strong>2 weeks late</strong> (original deadline: 1 December).<br>
+Reasons: one team member was ill for 10 days + unexpected server migration issues.<br>
+New delivery date: <strong>15 December</strong>. You are offering a <strong>10% discount</strong> as goodwill.<br>
+Sandra has emailed twice asking for an update and has received <strong>no reply</strong>.
+</div></div>
+
+<div class="exercise">
+<div class="ex-hdr" style="background:linear-gradient(135deg,#7C3AED,#6D28D9)">
+<div><div class="ex-n">Exercise 10A</div><div class="ex-type">Write the Full Email (100–130 words) — Plan First!</div></div></div>
+<div class="ex-body">
+<p style="font-size:13px;font-weight:700;color:var(--purple);margin-bottom:9px">Step 1 — Planning Grid</p>
+<div style="display:grid;grid-template-columns:130px 1fr;gap:6px;font-size:13px;margin-bottom:18px">
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Email type:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Register:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Subject line:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Opening line:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">3 key points:</span><span style="border-bottom:1px solid var(--gb);padding:20px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Call to action:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+</div>
+<p style="font-size:13px;font-weight:700;color:var(--purple);margin-bottom:9px">Step 2 — Full Email</p>
+<div style="display:grid;grid-template-columns:105px 1fr;gap:6px;font-size:13px">
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Subject:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Greeting:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Opening:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Body:</span><span style="border-bottom:1px solid var(--gb);padding:52px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">CTA:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Closing:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+<span style="font-weight:700;color:var(--purple);padding:7px 0">Sign-off:</span><span style="border-bottom:1px solid var(--gb);padding:7px 0"></span>
+</div></div></div>
+
+<div class="pair" style="margin-top:18px">
+<div class="pair-h">👥 Writing Task 2 — Role Play Email Exchange</div>
+<div class="pair-b">
+<div class="p-side"><div class="p-role">🅐 Student A — Sandra Lee (Client)</div><div class="p-txt">Receive Laura's apology (Task 1). Write a professional reply: acknowledge the apology · accept or push back on the discount offer · state your expectations and new deadline firmly. 60–80 words.</div></div>
+<div class="p-side"><div class="p-role">🅑 Student B — Laura's Director</div><div class="p-txt">Read Sandra's reply (from Student A). Forward it internally with a 3-sentence summary of the situation and the next steps. Use semi-formal internal register.</div></div>
+</div></div>
+
+<p style="font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--purple);margin:22px 0 9px">✅ Peer Review Checklist — Exchange &amp; Score</p>
+<div class="peer">
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Subject line is specific, professional, and relevant</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Correct salutation for the formality level</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Opening line states purpose immediately (BLOT)</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Apology is sincere and professionally expressed</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Explanation is logical and concise</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">New deadline is clearly and specifically stated</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Discount offer is mentioned and well-framed</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Closing line is polite and forward-looking</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Appropriate sign-off used for the register</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">No spelling or grammar errors detected</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">One idea per paragraph — no walls of text</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row"><input type="checkbox" class="peer-cb"><div class="peer-text">Word count approximately 100–130 words</div><div class="peer-score">/ 1</div></div>
+<div class="peer-row" style="background:var(--purple-l)">
+<div style="flex:1;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--purple)">TOTAL SCORE</div>
+<div style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:var(--purple)">___ / 12</div>
+</div></div>
+
+<div class="reflect">
+<div class="ref-title">📝 Final Reflection — Your Personal Goals</div>
+<p style="font-size:13.5px;color:var(--gd);margin-bottom:11px">What are your 3 main takeaways from today? What will you DO differently in your next business email?</p>
+<div class="write-line" contenteditable="true" spellcheck="false"></div><div class="write-line" contenteditable="true" spellcheck="false"></div><div class="write-line" contenteditable="true" spellcheck="false"></div><div class="write-line" contenteditable="true" spellcheck="false"></div>
+</div>
+</div></div>
+
+<!-- SUMMARY -->
+<div class="summary">
+<div class="sum-h">⭐ Key Takeaways — Remember These Always</div>
+<div class="cl">
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Structure every email: Subject · Greeting · Opening · Body · CTA · Closing · Sign-off</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Match your register (formal / semi-formal / informal) to your reader and context every time</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Subject lines determine whether your email gets opened — make them specific and clear</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>BLOT: Bottom Line On Top — state your purpose in sentence one, always</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>One email = one topic. One paragraph = one idea. Bullets for 3+ items only.</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Your CTA must answer: WHO does WHAT by WHEN — never be vague about action</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Proofread with E.M.A.I.L.: Errors · Manner · Attachments · Identify · Logic</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Tone in email = 100% words only — choose them with care every single time</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>The 24-hour rule: write → wait → reread → send for any sensitive or important email</span></div>
+<div class="cl-item"><span style="font-size:15px">📌</span><span>Your email represents you and your entire organisation — every word counts</span></div>
+</div></div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div>
+<div class="f-brand">✉ Business English: Mastering Professional Emails</div>
+<div class="f-sub">Developed by Fabio Busse · Business English Instructor · Curitiba, Paraná, Brasil</div>
+</div>
+<div class="f-copy">© 2025 Fabio Busse · All rights reserved</div>
+</div>
+
+</div>
+<script>
+(function () {
+  /* ─── QUIZ STATE ─────────────────────────── */
+  var QS = {};
+  function qInit(id, n) { QS[id] = {cur:0, score:0, n:n, lock:false}; qProg(id); }
+  function qProg(id) {
+    var s = QS[id]; if (!s) return;
+    var el = document.getElementById(id+'-pg');
+    if (el) el.style.width = Math.round(s.cur/s.n*100)+'%';
+  }
+
+  /* ─── COURSE PROGRESS ────────────────────── */
+  function cProg() {
+    var tot=0, done=0;
+    document.querySelectorAll('input[type=checkbox]').forEach(function(c){tot++;if(c.checked)done++;});
+    document.querySelectorAll('.ex-in[contenteditable]').forEach(function(e){tot++;if(e.textContent.trim())done++;});
+    document.querySelectorAll('.asn-group').forEach(function(g){
+      tot++; if(g.querySelector('.active-sel')) done++;
+    });
+    document.querySelectorAll('.write-line[contenteditable]').forEach(function(e){tot++;if(e.textContent.trim())done++;});
+    var pct = tot ? Math.round(done/tot*100) : 0;
+    var f=document.getElementById('pfill'), t=document.getElementById('ptxt');
+    if(f) f.style.width=pct+'%';
+    if(t) t.textContent=done+'/'+tot+' ('+pct+'%)';
+  }
+
+  /* ─── RESET ──────────────────────────────── */
+  function doReset() {
+    document.querySelectorAll('input[type=checkbox]').forEach(function(c){c.checked=false;});
+    document.querySelectorAll('[contenteditable]').forEach(function(e){e.textContent='';});
+    document.querySelectorAll('.asn-btn').forEach(function(b){b.classList.remove('active-sel');});
+    document.querySelectorAll('.qc-answer').forEach(function(a){a.hidden=true;});
+    document.querySelectorAll('.reveal-btn').forEach(function(b){b.textContent='Reveal';b.classList.remove('open');});
+    Object.keys(QS).forEach(function(id){ qReset(id, QS[id].n); });
+    cProg();
+  }
+  function qReset(id, n) {
+    for(var i=0;i<n;i++){
+      var card=document.getElementById(id+'-q'+i); if(!card) continue;
+      card.querySelectorAll('.q-opt').forEach(function(o){
+        o.classList.remove('q-correct','q-wrong','q-reveal'); o.disabled=false;
+      });
+      var ok=document.getElementById(id+'-ok'+i);
+      var no=document.getElementById(id+'-no'+i);
+      var nx=document.getElementById(id+'-nx'+i);
+      if(ok) ok.hidden=true; if(no) no.hidden=true; if(nx) nx.hidden=true;
+      card.classList.remove('active');
+    }
+    var f=document.getElementById(id+'-q0'); if(f) f.classList.add('active');
+    var res=document.getElementById(id+'-res'); if(res) res.hidden=true;
+    var sc=document.getElementById(id+'-sc'); if(sc) sc.textContent='0/'+n;
+    QS[id]={cur:0,score:0,n:n,lock:false};
+    qProg(id);
+  }
+
+  /* ─── MODAL ──────────────────────────────── */
+  var _cb=null;
+  function modal(title,msg,cb){
+    _cb=cb;
+    var el=document.createElement('div');
+    el.className='modal-overlay'; el.id='_m';
+    el.innerHTML='<div class="modal-box">'
+      +'<div class="modal-title">'+title+'</div>'
+      +'<div class="modal-msg">'+msg+'</div>'
+      +'<div class="modal-btns">'
+      +'<button type="button" class="modal-cancel" data-type="m-cancel">Cancel</button>'
+      +'<button type="button" class="modal-ok" data-type="m-ok">Yes, Reset</button>'
+      +'</div></div>';
+    document.body.appendChild(el);
+  }
+  function closeModal(){ var m=document.getElementById('_m'); if(m)m.remove(); _cb=null; }
+
+  /* ─── SINGLE CLICK HANDLER ───────────────── */
+  document.addEventListener('click', function(e) {
+
+    /* ASN buttons (no data-type, matched by class) */
+    var asn = e.target.closest('.asn-btn');
+    if (asn) {
+      asn.closest('.asn-group').querySelectorAll('.asn-btn').forEach(function(b){
+        b.classList.remove('active-sel');
+      });
+      asn.classList.add('active-sel');
+      cProg();
+      return;
+    }
+
+    var btn = e.target.closest('[data-type]');
+    if (!btn) return;
+    var t = btn.dataset.type;
+
+    if (t === 'goto') {
+      var el=document.getElementById(btn.dataset.target);
+      if(el) window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-58,behavior:'smooth'});
+    }
+    else if (t === 'reset') {
+      modal('Reset All Answers','This will clear all answers, checkboxes, and typed text.',doReset);
+    }
+    else if (t === 'm-cancel') { closeModal(); }
+    else if (t === 'm-ok')     { var fn=_cb; closeModal(); if(fn)fn(); }
+    else if (t === 'reveal') {
+      var ans=document.getElementById(btn.dataset.target); if(!ans) return;
+      var open=!ans.hidden;
+      ans.hidden=open;
+      btn.textContent=open?'Reveal':'Hide';
+      btn.classList.toggle('open',!open);
+    }
+    else if (t === 'quiz-opt') {
+      var id=btn.dataset.qid, qi=+btn.dataset.qi, oi=+btn.dataset.oi, cor=+btn.dataset.correct;
+      var s=QS[id]; if(!s||s.lock) return;
+      s.lock=true;
+
+      var card=document.getElementById(id+'-q'+qi);
+      card.querySelectorAll('.q-opt').forEach(function(o){
+        var idx=+o.dataset.oi; o.disabled=true;
+        if(idx===cor)  o.classList.add(oi===cor?'q-correct':'q-reveal');
+        if(idx===oi&&oi!==cor) o.classList.add('q-wrong');
+      });
+
+      if(oi===cor){ s.score++;
+        var el=document.getElementById(id+'-ok'+qi); if(el) el.hidden=false;
+      } else {
+        var el=document.getElementById(id+'-no'+qi); if(el) el.hidden=false;
+      }
+      var sc=document.getElementById(id+'-sc'); if(sc) sc.textContent=s.score+'/'+s.n;
+      var nx=document.getElementById(id+'-nx'+qi); if(nx) nx.hidden=false;
+    }
+    else if (t === 'quiz-next') {
+      var id=btn.dataset.qid, qi=+btn.dataset.qi, n=+btn.dataset.total;
+      var s=QS[id]; if(!s) return;
+
+      document.getElementById(id+'-q'+qi).classList.remove('active');
+      s.cur++; s.lock=false; qProg(id);
+
+      if(s.cur<n){
+        document.getElementById(id+'-q'+s.cur).classList.add('active');
+      } else {
+        var res=document.getElementById(id+'-res');
+        var circ=document.getElementById(id+'-circ');
+        var msg=document.getElementById(id+'-msg');
+        var sub=document.getElementById(id+'-sub');
+        var pct=Math.round(s.score/n*100);
+        if(circ) circ.textContent=s.score+'/'+n;
+        if(pct>=80){ if(circ)circ.style.background='#16A34A'; if(msg)msg.textContent='🎉 Excellent work!'; if(sub)sub.textContent='You clearly paid attention to the video. Great job!'; }
+        else if(pct>=60){ if(circ)circ.style.background='#D97706'; if(msg)msg.textContent='👍 Good effort!'; if(sub)sub.textContent='Watch the video again to review the points you missed.'; }
+        else{ if(circ)circ.style.background='#DC2626'; if(msg)msg.textContent='📺 Watch the video again!'; if(sub)sub.textContent='Rewatch carefully, then try the quiz again.'; }
+        if(res) res.hidden=false;
+      }
+    }
+    else if (t === 'quiz-retry') {
+      qReset(btn.dataset.qid, +btn.dataset.total);
+    }
+  });
+
+  /* ─── PASSIVE LISTENERS ──────────────────── */
+  document.addEventListener('change', function(e){ if(e.target.type==='checkbox') cProg(); });
+  document.addEventListener('input',  function(e){ if(e.target.isContentEditable) cProg(); });
+
+  /* ─── INTERSECTION: active nav ───────────── */
+  if('IntersectionObserver' in window){
+    var navBtns=document.querySelectorAll('.nav-btn[data-target]');
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting)
+          navBtns.forEach(function(b){ b.classList.toggle('active',b.dataset.target===en.target.id); });
+      });
+    },{rootMargin:'-40% 0px -50% 0px'}).observe && 
+    document.querySelectorAll('.mod[id]').forEach(function(m){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting)
+            navBtns.forEach(function(b){ b.classList.toggle('active',b.dataset.target===en.target.id); });
+        });
+      },{rootMargin:'-40% 0px -50% 0px'}).observe(m);
+    });
+  }
+
+  /* ─── INIT ───────────────────────────────── */
+  qInit('quiz1',5);
+  qInit('quiz2',5);
+  cProg();
+})();
+</script>
+</body>
+</html>
